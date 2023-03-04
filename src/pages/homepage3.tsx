@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { dehydrate, QueryClient } from "react-query";
 import { Element as Section } from "react-scroll";
 import {
   AboutSection,
@@ -15,26 +16,30 @@ import { Layout } from "../components/layout";
 import { SectionHeading } from "../components/utils";
 import { getPostsByPage } from "../lib/blogging";
 
-const Homepage2 = ({ posts }) => {
+interface HomepageProps {
+  posts: any;
+}
+
+const Homepage1 = ({ posts }: HomepageProps) => {
   return (
-    <Layout blurred>
+    <Layout>
       <Head>
         <title>Ramon - React Personal Portfolio</title>
       </Head>
 
       {/* Start Hero Section */}
       <Section name="section-home">
-        <HeroSection blurred />
+        <HeroSection typed={false} />
       </Section>
       {/* End Hero Section */}
-
+      <div>esto es un div de muestra</div>
       {/* Start About Section */}
       <Section
         name="section-about"
         className="about-section pt-24 lg:pt-28 xl:pt-32"
       >
         <div className="container mx-auto">
-          <SectionHeading animated={false} title="About Me" watermark="About" />
+          <SectionHeading title="About Me" watermark="About" />
           <AboutSection />
         </div>
       </Section>
@@ -46,7 +51,7 @@ const Homepage2 = ({ posts }) => {
         className="skills-section pt-24 lg:pt-28 xl:pt-32"
       >
         <div className="container mx-auto">
-          <SectionHeading animated={false} title="My Skills" watermark="Skills" />
+          <SectionHeading title="My Skills" watermark="Skills" />
           <SkillsSection />
         </div>
       </Section>
@@ -58,7 +63,7 @@ const Homepage2 = ({ posts }) => {
         className="services-section pt-24 lg:pt-28 xl:pt-32"
       >
         <div className="container mx-auto">
-          <SectionHeading animated={false} title="My Services" watermark="Services" />
+          <SectionHeading title="My Services" watermark="Services" />
           <ServicesSection />
         </div>
       </Section>
@@ -70,7 +75,7 @@ const Homepage2 = ({ posts }) => {
         className="resume-section pt-24 lg:pt-28 xl:pt-32"
       >
         <div className="container mx-auto">
-          <SectionHeading animated={false} title="My Resume" watermark="Resume" />
+          <SectionHeading title="My Resume" watermark="Resume" />
           <ResumeSection />
         </div>
       </Section>
@@ -82,7 +87,7 @@ const Homepage2 = ({ posts }) => {
         className="portfolios-section pt-24 lg:pt-28 xl:pt-32"
       >
         <div className="container mx-auto">
-          <SectionHeading animated={false} title="My Works" watermark="Works" />
+          <SectionHeading title="My Works" watermark="Works" />
           <PortfoliosSection />
         </div>
       </Section>
@@ -94,7 +99,7 @@ const Homepage2 = ({ posts }) => {
         className="reviews-section pt-24 lg:pt-28 xl:pt-32"
       >
         <div className="container mx-auto">
-          <SectionHeading animated={false} title="Client Reviews" watermark="Reviews" />
+          <SectionHeading title="Client Reviews" watermark="Reviews" />
           <ReviewsSection />
         </div>
       </Section>
@@ -106,7 +111,7 @@ const Homepage2 = ({ posts }) => {
         className="news-section pt-24 lg:pt-28 xl:pt-32"
       >
         <div className="container mx-auto">
-          <SectionHeading animated={false} title="Latest Blogs" watermark="Blogs" />
+          <SectionHeading title="Latest Blogs" watermark="Blogs" />
           <BlogSection posts={posts} />
         </div>
       </Section>
@@ -118,7 +123,7 @@ const Homepage2 = ({ posts }) => {
         className="contact-section pt-24 lg:pt-28 xl:pt-32"
       >
         <div className="container mx-auto">
-          <SectionHeading animated={false} title="Contact Us" watermark="Contact" />
+          <SectionHeading title="Contact Me" watermark="Contact" />
           <ContactSection />
         </div>
       </Section>
@@ -129,13 +134,17 @@ const Homepage2 = ({ posts }) => {
   );
 };
 
-export default Homepage2;
+export default Homepage1;
 
-export function getStaticProps() {
+export async function getStaticProps() {
+  // const queryClient = new QueryClient();
   const { posts } = getPostsByPage();
+
+  // await queryClient.prefetchQuery('services', getServices)
 
   return {
     props: {
+      // dehydratedState: dehydrate(queryClient),
       posts,
     },
     revalidate: 10,

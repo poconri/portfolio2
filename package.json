@@ -14,6 +14,10 @@
     },
     "dependencies": {
         "@emailjs/browser": "^3.6.2",
+        "@types/fslightbox-react": "^1.7.0",
+        "@types/react-portal": "^4.0.4",
+        "@types/react-scroll": "^1.8.6",
+        "@types/react-star-ratings": "^2.3.0",
         "axios": "^0.26.1",
         "disqus-react": "^1.1.2",
         "framer-motion": "^6.2.10",
@@ -42,6 +46,7 @@
         "swiper": "^8.1.4"
     },
     "devDependencies": {
+        "@types/react": "^18.0.28",
         "autoprefixer": "^10.4.4",
         "eslint": "8.12.0",
         "eslint-config-next": "12.1.4",
@@ -52,7 +57,8 @@
         "sass": "^1.52.0",
         "tailwindcss": "^3.0.23",
         "tailwindcss-debug-screens": "^2.2.1",
-        "tailwindcss-nested-groups": "^1.2.4"
+        "tailwindcss-nested-groups": "^1.2.4",
+        "typescript": "^4.9.5"
     },
     "license": "MIT",
     "proxy": "http://localhost:3000/api"
