@@ -8,6 +8,7 @@ import { childrenAnimation } from "../../lib/motion";
 import { useQuery } from "react-query";
 import { getInformation } from "../../fetchers";
 import ReactTyped from "react-typed";
+import photo from "../../assets/photo.jpg";
 
 interface HeroSectionProps {
   blurred?: boolean;
@@ -15,14 +16,25 @@ interface HeroSectionProps {
   typed?: boolean;
 }
 
+const BURNDATA = {
+  thumbImage: photo,
+  fullName: "Ramon Pocón",
+  bio: "This is bio data I need to add typescript and data about myself.",
+  socialAddress: {
+    facebook: "holi",
+    twitter: "holi",
+    github: "holi",
+    linkedin: "holi",
+    dribbble: "holi",
+  },
+};
+
 const HeroSection = ({
   blurred,
   scroll = true,
   typed = true,
 }: HeroSectionProps) => {
-  const { data } = useQuery("information", getInformation);
-
-  if (!data) return null;
+  // const { data } = useQuery("information", getInformation);
 
   return (
     <div className="herosection relative overflow-hidden">
@@ -50,8 +62,8 @@ const HeroSection = ({
                   <Image
                     loader={imageLoader}
                     unoptimized={true}
-                    src={data.thumbImage}
-                    alt={data.fullName}
+                    src={BURNDATA.thumbImage}
+                    alt={BURNDATA.fullName}
                     height={150}
                     width={150}
                     layout="responsive"
@@ -78,14 +90,15 @@ const HeroSection = ({
                     backSpeed={20}
                     backDelay={2000}
                     strings={[
-                      data.fullName,
-                      "Full-stack Developer",
-                      "Web Designer",
+                      BURNDATA.fullName,
+                      "Sr Frontend Developer",
+                      "Web Developer",
+                      "Typescript especialist 🚀",
                     ]}
                     className="text-primary"
                   />
                 ) : (
-                  <span className="text-primary">{data.fullName}</span>
+                  <span className="text-primary">{BURNDATA.fullName}</span>
                 )}
               </motion.h1>
               <motion.p
@@ -96,7 +109,7 @@ const HeroSection = ({
                 variants={childrenAnimation}
                 className="lead mb-0"
               >
-                {data.bio}
+                {BURNDATA.bio}
               </motion.p>
               <motion.div
                 initial="hidden"
@@ -106,7 +119,7 @@ const HeroSection = ({
                 variants={childrenAnimation}
                 className="herosection-socialicons mt-7 text-center"
               >
-                <SocialIcons data={data.socialAddress} />
+                <SocialIcons data={BURNDATA.socialAddress} />
               </motion.div>
             </div>
           </div>

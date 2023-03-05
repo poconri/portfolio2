@@ -32,7 +32,7 @@ const Homepage1 = ({ posts }: HomepageProps) => {
         <HeroSection typed={false} />
       </Section>
       {/* End Hero Section */}
-      <div>esto es un div de muestra</div>
+
       {/* Start About Section */}
       <Section
         name="section-about"
