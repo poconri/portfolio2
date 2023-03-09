@@ -36,6 +36,8 @@ const HeroSection = ({
 }: HeroSectionProps) => {
   // const { data } = useQuery("information", getInformation);
 
+  // if(!data) return null;
+
   return (
     <div className="herosection relative overflow-hidden">
       {!blurred && (
@@ -93,7 +95,7 @@ const HeroSection = ({
                       BURNDATA.fullName,
                       "Frontend Developer",
                       "Web Developer",
-                      "Typescript especialist 🚀",
+                      "Typescript enthusiast 🚀",
                     ]}
                     className="text-primary"
                   />

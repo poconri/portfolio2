@@ -1,4 +1,4 @@
-interface TimelineItemProps {
+export interface TimelineItemProps {
   timeline: {
     title: string;
     meta: string;

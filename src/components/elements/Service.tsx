@@ -1,6 +1,6 @@
 import { ReactSVG } from "react-svg";
 
-interface ServiceProps {
+export interface ServiceProps {
   service: {
     title: string;
     text: string;

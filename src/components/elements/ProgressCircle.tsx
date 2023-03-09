@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-interface ProgressCircleProps {
+export interface ProgressCircleProps {
   skill: {
     title: string;
     percentage: number;

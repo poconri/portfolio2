@@ -4,11 +4,24 @@ import { useQuery } from "react-query";
 import { getJobExperience } from "../../fetchers";
 import { childrenAnimation } from "../../lib/motion";
 import { TimelineItem } from "../elements";
+import { TimelineData } from "./EducationTimeline";
+
+const BURNDATA: TimelineData[] = [
+  {
+    id: 1,
+    timeline: {
+      title: "Front-end web Developer",
+      meta: "Startrack S.A",
+      text: "I mainly work with React with typescript, in a large GPS tracking project, where I have to develop new features and maintain the existing ones. Working with mobx",
+      year: "2022 - currently",
+    },
+  },
+];
 
 const JobTimeline = () => {
-  const { data } = useQuery("job-experience", getJobExperience);
+  // const { data } = useQuery("job-experience", getJobExperience);
 
-  if (!data) return null;
+  // if (!data) return null;
 
   return (
     <div className="job-experience">
@@ -16,7 +29,7 @@ const JobTimeline = () => {
         <RiBriefcaseLine className="mr-2 inline-block text-primary" />
         Working Experience
       </h4>
-      {data?.map((timeline: any, index: any) => (
+      {BURNDATA?.map((timelineData, index) => (
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -24,9 +37,9 @@ const JobTimeline = () => {
           transition={{ duration: 0.4, delay: 0.2 * index }}
           variants={childrenAnimation}
           className="timeline-wrap"
-          key={timeline.id}
+          key={timelineData.id}
         >
-          <TimelineItem timeline={timeline} />
+          <TimelineItem timeline={timelineData.timeline} />
         </motion.div>
       ))}
     </div>
