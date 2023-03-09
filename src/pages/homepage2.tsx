@@ -23,7 +23,7 @@ const Homepage2 = ({ posts }: HomePageProps) => {
   return (
     <Layout>
       <Head>
-        <title>Ramon - React Personal Portfolio</title>
+        <title>Ramon Pocon - React Personal Portfolio</title>
       </Head>
 
       {/* Start Hero Section */}

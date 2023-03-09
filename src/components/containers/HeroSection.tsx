@@ -19,13 +19,13 @@ interface HeroSectionProps {
 const BURNDATA = {
   thumbImage: photo,
   fullName: "Ramon Pocón",
-  bio: "This is bio data I need to add typescript and data about myself.",
+  bio: "I'm a frontend developer with experience in React and Typescript. I love collaborating with development teams and designers to create high-quality web products that exceed user expectations. I am passionate about web accessibility and performance optimization. If you are interested in working together, feel free to send me a message!",
   socialAddress: {
-    facebook: "holi",
-    twitter: "holi",
-    github: "holi",
-    linkedin: "holi",
-    dribbble: "holi",
+    facebook: "https://www.facebook.com/ramon.ignacio.7",
+    twitter: "https://twitter.com/kaozgt",
+    github: "https://github.com/poconri",
+    linkedin:
+      "https://www.linkedin.com/in/ramon-ignacio-poc%C3%B3n-elias-23331738/",
   },
 };
 
@@ -91,7 +91,7 @@ const HeroSection = ({
                     backDelay={2000}
                     strings={[
                       BURNDATA.fullName,
-                      "Sr Frontend Developer",
+                      "Frontend Developer",
                       "Web Developer",
                       "Typescript especialist 🚀",
                     ]}
