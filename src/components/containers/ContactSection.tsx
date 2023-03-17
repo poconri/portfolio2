@@ -6,10 +6,15 @@ import { getInformation } from "../../fetchers";
 import { childrenAnimation } from "../../lib/motion";
 import ContactForm from "./ContactForm";
 
-const ContactSection = () => {
-  const { data } = useQuery("information", getInformation);
+const BURNDATA = {
+  phoneNumbers: ["+502 5029 6653"],
+  emailAddress: ["pocon.ri@gmail.com"],
+};
 
-  if (!data) return null;
+const ContactSection = () => {
+  // const { data } = useQuery("information", getInformation);
+
+  // if (!data) return null;
 
   return (
     <div className="grid grid-cols-9 gap-7">
@@ -23,10 +28,7 @@ const ContactSection = () => {
       >
         <div className="contact-information">
           <h4>Contact Information</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A omnis,
-            iusto harum possimus non praesentium qui facere.
-          </p>
+          <p>Want to get in touch? Contact me on any of the platforms</p>
           <span className="inline-block h-1 w-20 rounded-full bg-primary bg-opacity-20"></span>
           <div className="contact-blocks mt-5 space-y-5">
             <div className="contact-block card flex p-4 md:p-5">
@@ -35,7 +37,7 @@ const ContactSection = () => {
               </span>
               <div className="content">
                 <h5 className="mb-2">Contact on phone</h5>
-                {data.phoneNumbers.map((number: string, index: number) => (
+                {BURNDATA.phoneNumbers.map((number: string, index: number) => (
                   <p className="mb-0" key={index}>
                     <Link href={`tel:${number.split("-").join("")}`}>
                       <a className="no-underline">{number}</a>
@@ -50,7 +52,7 @@ const ContactSection = () => {
               </span>
               <div className="content">
                 <h5 className="mb-2">Contact on mail</h5>
-                {data.emailAddress.map((email: string, index: number) => (
+                {BURNDATA.emailAddress.map((email: string, index: number) => (
                   <p className="mb-0" key={index}>
                     <Link href={`mailto:${email}`}>
                       <a className="no-underline">{email}</a>
@@ -59,7 +61,7 @@ const ContactSection = () => {
                 ))}
               </div>
             </div>
-            <div className="contact-block card flex p-4 md:p-5">
+            {/* <div className="contact-block card flex p-4 md:p-5">
               <span className="icon mr-4 inline-flex h-16 w-16 shrink-0 grow-0 basis-16 items-center justify-center rounded-full bg-primary bg-opacity-10 text-3xl text-primary">
                 <RiMapPinLine />
               </span>
@@ -69,7 +71,7 @@ const ContactSection = () => {
                   121 King Street, Melbourne, United States
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </motion.div>

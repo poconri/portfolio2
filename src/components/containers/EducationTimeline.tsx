@@ -17,7 +17,7 @@ const BURNDATA: TimelineData[] = [
       title: "JavaScript Developer",
       meta: "Platzi",
       text: "I'm a web developer with extensive experience in building web applications using React,Next.js and redux.",
-      year: "2021 - 2022",
+      year: "2019 - 2022",
     },
   },
   {
@@ -25,7 +25,7 @@ const BURNDATA: TimelineData[] = [
     timeline: {
       title: "Computer Systems Engineering",
       meta: "Universidad Galileo Guatemala",
-      text: " I'm a computer systems engineer with experience in designing, developing and deploying complex systems for a variety of industries",
+      text: " I'm currently stying computer systems engineer with experience in designing, developing and deploying complex systems for a variety of industries",
       year: "2023 - currently",
     },
   },

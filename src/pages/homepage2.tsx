@@ -38,7 +38,7 @@ const Homepage2 = ({ posts }: HomePageProps) => {
         className="about-section pt-24 lg:pt-28 xl:pt-32"
       >
         <div className="container mx-auto">
-          <SectionHeading animated title="About Me" watermark="About" />
+          <SectionHeading animated={false} title="About Me" watermark="About" />
           <AboutSection />
         </div>
       </Section>
@@ -50,7 +50,11 @@ const Homepage2 = ({ posts }: HomePageProps) => {
         className="skills-section pt-24 lg:pt-28 xl:pt-32"
       >
         <div className="container mx-auto">
-          <SectionHeading animated title="My Skills" watermark="Skills" />
+          <SectionHeading
+            animated={false}
+            title="My Skills"
+            watermark="Skills"
+          />
           <SkillsSection />
         </div>
       </Section>
@@ -62,7 +66,11 @@ const Homepage2 = ({ posts }: HomePageProps) => {
         className="services-section pt-24 lg:pt-28 xl:pt-32"
       >
         <div className="container mx-auto">
-          <SectionHeading animated title="My Services" watermark="Services" />
+          <SectionHeading
+            animated={false}
+            title="My Services"
+            watermark="Services"
+          />
           <ServicesSection />
         </div>
       </Section>
@@ -74,7 +82,11 @@ const Homepage2 = ({ posts }: HomePageProps) => {
         className="resume-section pt-24 lg:pt-28 xl:pt-32"
       >
         <div className="container mx-auto">
-          <SectionHeading animated title="My Resume" watermark="Resume" />
+          <SectionHeading
+            animated={false}
+            title="My Resume"
+            watermark="Resume"
+          />
           <ResumeSection />
         </div>
       </Section>
@@ -93,7 +105,7 @@ const Homepage2 = ({ posts }: HomePageProps) => {
       {/* End Portfolios Section */}
 
       {/* Start Reviews Section */}
-      <Section
+      {/* <Section
         name="section-reviews"
         className="reviews-section pt-24 lg:pt-28 xl:pt-32"
       >
@@ -105,7 +117,7 @@ const Homepage2 = ({ posts }: HomePageProps) => {
           />
           <ReviewsSection />
         </div>
-      </Section>
+      </Section> */}
       {/* End Reviews Section */}
 
       {/* Start Blog Section */}
@@ -115,9 +127,9 @@ const Homepage2 = ({ posts }: HomePageProps) => {
       >
         <div className="container mx-auto">
           <SectionHeading
-            animated={false}
             title="Latest Blogs"
             watermark="Blogs"
+            animated={false}
           />
           <BlogSection posts={posts} />
         </div>
@@ -132,7 +144,7 @@ const Homepage2 = ({ posts }: HomePageProps) => {
         <div className="container mx-auto">
           <SectionHeading
             animated={false}
-            title="Contact Us"
+            title="Contact Me"
             watermark="Contact"
           />
           <ContactSection />

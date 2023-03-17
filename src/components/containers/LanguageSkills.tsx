@@ -49,13 +49,6 @@ export const BURNDATA: SkillData[] = [
     },
   },
   {
-    id: 14,
-    skill: {
-      title: "Firebase",
-      percentage: 80,
-    },
-  },
-  {
     id: 10,
     skill: {
       title: "Python",
