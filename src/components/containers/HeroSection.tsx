@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 import { childrenAnimation } from "../../lib/motion";
 import { useQuery } from "react-query";
 import { getInformation } from "../../fetchers";
-import ReactTyped from "react-typed";
 import photo from "../../assets/photo.jpg";
+import { TypeAnimation } from "react-type-animation";
 
 interface HeroSectionProps {
   blurred?: boolean;
@@ -86,20 +86,37 @@ const HeroSection = ({
               >
                 <span className="block sm:inline">Hi, I am</span>{" "}
                 {typed ? (
-                  <ReactTyped
-                    loop
-                    typeSpeed={100}
-                    backSpeed={20}
-                    backDelay={2000}
-                    strings={[
+                  <TypeAnimation
+                    sequence={[
                       BURNDATA.fullName,
+                      1000,
                       "Frontend Developer",
+                      1000,
                       "Web Developer",
+                      1000,
                       "Typescript enthusiast 🚀",
+                      1000,
                     ]}
+                    wrapper="span"
                     className="text-primary"
+                    speed={1}
+                    deletionSpeed={1}
+                    repeat={Infinity}
                   />
                 ) : (
+                  // <ReactTyped
+                  //   loop
+                  //   typeSpeed={100}
+                  //   backSpeed={20}
+                  //   backDelay={2000}
+                  //   strings={[
+                  //     BURNDATA.fullName,
+                  //     "Frontend Developer",
+                  //     "Web Developer",
+                  //     "Typescript enthusiast 🚀",
+                  //   ]}
+                  //   className="text-primary"
+                  // />
                   <span className="text-primary">{BURNDATA.fullName}</span>
                 )}
               </motion.h1>
