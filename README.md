@@ -25,7 +25,8 @@ I am currently studying Computer Systems Engineering, where I have gained experi
 
 
 ## Skills
-- Frontend development: React, TypeScript, JavaScript, HTML, CSS, Sass, Storybook
+- Programing Languages: Javascript, Typescript and bits of python an ruby
+- Frontend development: React, HTML, CSS, Sass, Storybook
 - Development tools: Git, Webpack, Babel, NPM, Yarn
 - Others: Responsive design, web accessibility, performance optimization
 
