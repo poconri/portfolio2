@@ -17,10 +17,15 @@ At Platzi, I learned the foundational concepts of HTML, CSS, and JavaScript, as 
 I am currently studying Computer Systems Engineering, where I have gained experience in designing, developing, and deploying complex systems for a variety of industries.
 
 ## Work Experience
-Here you can list your previous jobs, personal projects, contributions to open-source projects, etc.
+- Front-end web Developer at Unenmo (Dec 2021 - May 2022)
+  - Worked with Vue.js and mostly CSS. It was a business card business project, coding pixel perfect designs.
+
+- Front-end web Developer at Startrack S.A (June 2022 - Currently)
+  - Mainly work with React with TypeScript, in a large GPS tracking project, where I have to develop new features and maintain the existing ones. Working with mobx.
+
 
 ## Skills
-- Frontend development: React, TypeScript, JavaScript, HTML, CSS, Sass
+- Frontend development: React, TypeScript, JavaScript, HTML, CSS, Sass, Storybook
 - Development tools: Git, Webpack, Babel, NPM, Yarn
 - Others: Responsive design, web accessibility, performance optimization
 
