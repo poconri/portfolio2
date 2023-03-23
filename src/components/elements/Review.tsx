@@ -25,6 +25,7 @@ const Review = ({
           alt="user image"
           height={80}
           width={80}
+          objectFit="contain"
           layout="responsive"
           placeholder="blur"
           blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(80, 80))}`}

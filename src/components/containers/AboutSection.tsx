@@ -44,8 +44,12 @@ const AboutSection = () => {
               loader={imageLoader}
               unoptimized={true}
               src={BURNDATA.largeImage}
+              style={{
+                backgroundColor: "#162033",
+              }}
               height={422}
               width={660}
+              objectFit="contain"
               layout="responsive"
               alt={BURNDATA.fullName}
               placeholder="blur"
