@@ -1,34 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ramon Pocón - Frontend Developer
 
-## Getting Started
+## Personal Information
+- Full Name: Ramon Pocón
+- Age: 33
+- Nationality: Guatemalan
+- Location: Guatemala City, Guatemala
+- Languages: Spanish, English
+- Phone: +502 5029 6653
+- Email: pocon.ri@gmail.com
 
-First, run the development server:
+## Education
+### JavaScript Developer - Platzi (2019-2022)
+At Platzi, I learned the foundational concepts of HTML, CSS, and JavaScript, as well as more complex tools and frameworks like React, TypeScript, and Redux.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### Computer Systems Engineering - Universidad Galileo Guatemala (2023-Present)
+I am currently studying Computer Systems Engineering, where I have gained experience in designing, developing, and deploying complex systems for a variety of industries.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Work Experience
+Here you can list your previous jobs, personal projects, contributions to open-source projects, etc.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Skills
+- Frontend development: React, TypeScript, JavaScript, HTML, CSS, Sass
+- Development tools: Git, Webpack, Babel, NPM, Yarn
+- Others: Responsive design, web accessibility, performance optimization
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Social Media and Contact
+- Facebook: https://www.facebook.com/ramon.ignacio.7
+- Twitter: https://twitter.com/kaozgt
+- GitHub: https://github.com/poconri
+- LinkedIn: https://www.linkedin.com/in/ramon-ignacio-poc%C3%B3n-elias-23331738/
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+If you're interested in working together or have any questions, please don't hesitate to contact me.
