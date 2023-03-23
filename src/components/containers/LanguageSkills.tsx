@@ -38,7 +38,7 @@ export const BURNDATA: SkillData[] = [
     id: 5,
     skill: {
       title: "Next.js",
-      percentage: 80,
+      percentage: 60,
     },
   },
   {

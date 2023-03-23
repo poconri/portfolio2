@@ -50,7 +50,7 @@ const Sidemenu = ({ fullMenu, fullMenuHandler }: SidemenuProps) => {
           </span>
           <Link href="/">
             <a className="block font-medium text-heading no-underline hover:text-primary lg:inline">
-              NuclearThemes
+              Ramon Pocon
             </a>
           </Link>
         </p>

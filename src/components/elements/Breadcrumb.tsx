@@ -2,7 +2,7 @@ import Link from "next/link";
 
 interface BreadcrumbProps {
   title: string;
-  paths: {
+  paths?: {
     name: string;
     link?: string;
   }[];
@@ -25,19 +25,20 @@ const Breadcrumb = ({ title, paths, blurred }: BreadcrumbProps) => {
             <h2 className="capitalize text-primary">{title}</h2>
             {Array.isArray(paths) && paths.length && (
               <ul className="mb-0 inline-flex list-none flex-wrap justify-center gap-x-2 pl-0">
-                {paths.map((path) => (
-                  <li className="inline-block capitalize" key={path.name}>
-                    {path.link ? (
-                      <Link href={path.link}>
-                        <a className="text-heading hover:text-primary">
-                          {path.name}
-                        </a>
-                      </Link>
-                    ) : (
-                      path.name
-                    )}
-                  </li>
-                ))}
+                {paths &&
+                  paths.map((path) => (
+                    <li className="inline-block capitalize" key={path.name}>
+                      {path.link ? (
+                        <Link href={path.link}>
+                          <a className="text-heading hover:text-primary">
+                            {path.name}
+                          </a>
+                        </Link>
+                      ) : (
+                        path.name
+                      )}
+                    </li>
+                  ))}
               </ul>
             )}
           </div>

@@ -19,7 +19,7 @@ interface HeroSectionProps {
 const BURNDATA = {
   thumbImage: photo,
   fullName: "Ramon Pocón",
-  bio: "I'm a frontend developer with experience in React and Typescript. I love collaborating with development teams and designers to create high-quality web products that exceed user expectations. I am passionate about web accessibility and performance optimization. If you are interested in working together, feel free to send me a message!",
+  bio: "I am an experienced frontend developer specializing in React and Typescript with a passion for collaborating with development teams and designers to create high-quality web products that exceed user expectations. I am passionate about web accessibility and performance optimization. If you're interested in working together, please don't hesitate to send me a message.",
   socialAddress: {
     facebook: "https://www.facebook.com/ramon.ignacio.7",
     twitter: "https://twitter.com/kaozgt",

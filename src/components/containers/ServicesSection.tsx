@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { RiCodeSSlashLine } from "react-icons/ri";
+import { AiOutlineMobile } from "react-icons/ai";
 import { useQuery } from "react-query";
 import { getServices } from "../../fetchers";
 import { childrenAnimation } from "../../lib/motion";
@@ -16,7 +17,7 @@ const BURNDATA: ServiceData[] = [
     service: {
       title: "Front-end Development",
       text: " I specialize in creating responsive and user-friendly interfaces that meet the needs of modern web applications.",
-      icon: "react-icons/ri/RiCodeSSlashLine",
+      icon: <RiCodeSSlashLine />,
     },
   },
   {
@@ -24,7 +25,7 @@ const BURNDATA: ServiceData[] = [
     service: {
       title: "Mobile App Development",
       text: " I'm a mobile app developer with extensive experience in building native apps for iOS and Android using React Native.",
-      icon: "react-icons/ri/RiMobileLine",
+      icon: <AiOutlineMobile />,
     },
   },
 ];

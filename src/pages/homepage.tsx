@@ -1,4 +1,8 @@
+import { getAnalytics } from "firebase/analytics";
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 import Head from "next/head";
+import { useEffect } from "react";
 import { Element as Section } from "react-scroll";
 import {
   AboutSection,
@@ -14,12 +18,20 @@ import {
 import { Layout } from "../components/layout";
 import { SectionHeading } from "../components/utils";
 import { getPostsByPage } from "../lib/blogging";
+import { firebaseConfig } from "../utils/firebase";
 
 interface HomePageProps {
-  posts: any;
+  posts?: any;
 }
 
-const Homepage2 = ({ posts }: HomePageProps) => {
+const Homepage = ({ posts }: HomePageProps) => {
+  useEffect(() => {
+    const app = initializeApp(firebaseConfig, "portfolio");
+    const analytics = getAnalytics(app);
+    const db = getFirestore(app);
+    window.firebase = { app, analytics, db };
+    console.log(window.firebase, "firebase");
+  }, []);
   return (
     <Layout>
       <Head>
@@ -93,7 +105,7 @@ const Homepage2 = ({ posts }: HomePageProps) => {
       {/* End Resume Section */}
 
       {/* Start Portfolios Section */}
-      <Section
+      {/* <Section
         name="section-portfolios"
         className="portfolios-section pt-24 lg:pt-28 xl:pt-32"
       >
@@ -101,7 +113,7 @@ const Homepage2 = ({ posts }: HomePageProps) => {
           <SectionHeading animated={false} title="My Works" watermark="Works" />
           <PortfoliosSection />
         </div>
-      </Section>
+      </Section> */}
       {/* End Portfolios Section */}
 
       {/* Start Reviews Section */}
@@ -121,7 +133,7 @@ const Homepage2 = ({ posts }: HomePageProps) => {
       {/* End Reviews Section */}
 
       {/* Start Blog Section */}
-      <Section
+      {/* <Section
         name="section-blog"
         className="news-section pt-24 lg:pt-28 xl:pt-32"
       >
@@ -133,7 +145,7 @@ const Homepage2 = ({ posts }: HomePageProps) => {
           />
           <BlogSection posts={posts} />
         </div>
-      </Section>
+      </Section> */}
       {/* End Blog Section */}
 
       {/* Start Contact Section */}
@@ -157,7 +169,7 @@ const Homepage2 = ({ posts }: HomePageProps) => {
   );
 };
 
-export default Homepage2;
+export default Homepage;
 
 export function getStaticProps() {
   const { posts } = getPostsByPage();

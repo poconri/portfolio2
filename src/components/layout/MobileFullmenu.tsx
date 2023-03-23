@@ -16,11 +16,11 @@ const MobileFullmenu = ({ fullMenuHandler }: MobileFullmenuProps) => {
         <RiCloseLine className="inline" />
       </button>
       <div className="sidenavmobile flex h-full flex-col justify-between p-7 text-center">
-        <Logo url="/homepage1" />
+        <Logo url="/homepage" />
         <nav className="sidenav-mobilmenu relative max-h-full w-full overflow-y-auto">
           <ul className="mb-0 list-none pl-0">
             <li className="block">
-              <Link href="/homepage1">
+              <Link href="/">
                 <a
                   className="group relative inline-block cursor-pointer overflow-hidden py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
                   onClick={(e) => fullMenuHandler(false)}
@@ -91,9 +91,9 @@ const MobileFullmenu = ({ fullMenuHandler }: MobileFullmenuProps) => {
           <span className="whitespace-nowrap">
             &copy; {new Date().getFullYear()}{" "}
           </span>
-          <Link href="/">
+          <Link href="/homepage">
             <a className="font-medium text-heading no-underline hover:text-primary">
-              NuclearThemes
+              Ramon Pocon
             </a>
           </Link>
         </p>
