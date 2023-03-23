@@ -19,7 +19,7 @@ const Logo = ({ url = "/", text = false }: LogoProps) => {
             <img
               className="h-8 max-h-full w-auto"
               src="/images/logo.png"
-              alt="Bieber"
+              alt="Ramon"
             />
           </>
         )}
