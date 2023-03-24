@@ -24,7 +24,7 @@ const BURNDATA: ServiceData[] = [
     id: 2,
     service: {
       title: "Mobile App Development",
-      text: " I'm a mobile app developer with extensive experience in building native apps for iOS and Android using React Native.",
+      text: "I have experience in developing mobile applications for both Android and iOS platforms using React Native.",
       icon: <AiOutlineMobile />,
     },
   },
