@@ -18,20 +18,12 @@ import {
 import { Layout } from "../components/layout";
 import { SectionHeading } from "../components/utils";
 import { getPostsByPage } from "../lib/blogging";
-import { firebaseConfig } from "../utils/firebase";
 
 interface HomePageProps {
   posts?: any;
 }
 
 const Homepage = ({ posts }: HomePageProps) => {
-  useEffect(() => {
-    const app = initializeApp(firebaseConfig, "portfolio");
-    const analytics = getAnalytics(app);
-    const db = getFirestore(app);
-    window.firebase = { app, analytics, db };
-    console.log(window.firebase, "firebase");
-  }, []);
   return (
     <Layout>
       <Head>
