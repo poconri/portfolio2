@@ -1,6 +1,3 @@
-import { getAnalytics } from "firebase/analytics";
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
 import Head from "next/head";
 import { useEffect } from "react";
 import { Element as Section } from "react-scroll";

@@ -14,7 +14,7 @@ import {
 import { childrenAnimation } from "../../lib/motion";
 import { Layout } from "../../components/layout";
 
-const Posts = ({ posts, hasMore, categories, recentPosts }) => {
+const Posts = ({ posts, hasMore, categories, recentPosts }: any) => {
   const [mounted, setMounted] = useState(false);
   const [uniqueCategories, setUniqueCategories] = useState([]);
 
@@ -35,7 +35,7 @@ const Posts = ({ posts, hasMore, categories, recentPosts }) => {
   return (
     <Layout>
       <Head>
-        <title>Blogs - Bieber - React Personal Portfolio Template</title>
+        <title>Blogs - Ramon Pocon - React Personal Portfolio</title>
       </Head>
       <Breadcrumb
         title="Blogs"
