@@ -13,7 +13,15 @@ import { Layout } from "../../components/layout";
 import { Spinner } from "../../components/utils";
 import Comments from "../../components/utils/Comments";
 
-const PostPage = ({ title, date, cover, category, content }) => {
+interface PostPageProps {
+  title: string;
+  date: string;
+  cover: string;
+  category: string[];
+  content: string;
+}
+
+const PostPage = ({ title, date, cover, category, content }: PostPageProps) => {
   const [mounted, setMounted] = useState(false);
   const router = useRouter();
   const { slug } = router.query;
@@ -28,11 +36,11 @@ const PostPage = ({ title, date, cover, category, content }) => {
         <Spinner />
       </div>
     );
-
+  console.log(title, date, cover, category, content, "data");
   return (
     <Layout>
       <Head>
-        <title>{title} - Bieber - React Personal Portfolio Template</title>
+        <title>{title} - Ramon Pocon - React Personal Portfolio Template</title>
       </Head>
       <Breadcrumb
         title={title}
@@ -74,9 +82,9 @@ const PostPage = ({ title, date, cover, category, content }) => {
               <div className="mb-0 flex gap-2 text-heading">
                 Category :{" "}
                 <div className="inline-flex list-none gap-1.5">
-                  {category.map((cat, i) => (
+                  {category.map((cat, index) => (
                     <span
-                      key={i}
+                      key={index}
                       className="after:content-[','] last:after:hidden"
                     >
                       <Link href={`/category/${createSlug(cat)}/1`}>
@@ -93,9 +101,7 @@ const PostPage = ({ title, date, cover, category, content }) => {
                     month: "short",
                   })} ${new Date(date).toLocaleDateString("en-us", {
                     day: "2-digit",
-                  })}, ${new Date(date).getFullYear({
-                    year: "numeric",
-                  })}`}
+                  })}, ${new Date(date).getFullYear()}`}
                 </span>
               </p>
             </div>

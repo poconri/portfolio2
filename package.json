@@ -15,6 +15,7 @@
     "dependencies": {
         "@emailjs/browser": "^3.6.2",
         "@types/fslightbox-react": "^1.7.0",
+        "@types/marked": "^4.0.8",
         "@types/react-portal": "^4.0.4",
         "@types/react-scroll": "^1.8.6",
         "@types/react-star-ratings": "^2.3.0",
