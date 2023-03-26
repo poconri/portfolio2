@@ -21,6 +21,7 @@ interface HomePageProps {
 }
 
 const Homepage = ({ posts }: HomePageProps) => {
+  console.log(posts, "post server side");
   return (
     <Layout>
       <Head>
@@ -122,7 +123,7 @@ const Homepage = ({ posts }: HomePageProps) => {
       {/* End Reviews Section */}
 
       {/* Start Blog Section */}
-      {/* <Section
+      <Section
         name="section-blog"
         className="news-section pt-24 lg:pt-28 xl:pt-32"
       >
@@ -134,7 +135,7 @@ const Homepage = ({ posts }: HomePageProps) => {
           />
           <BlogSection posts={posts} />
         </div>
-      </Section> */}
+      </Section>
       {/* End Blog Section */}
 
       {/* Start Contact Section */}

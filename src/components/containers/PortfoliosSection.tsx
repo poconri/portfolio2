@@ -12,7 +12,6 @@ const PortfoliosSection = () => {
   const [pageNumber, setPageNumber] = useState(1);
 
   const { data } = useQuery("portfolios", getPortfolios);
-
   useEffect(() => {
     if (data) setVisiblePortfolios(data.slice(0, 6));
   }, [data]);

@@ -36,7 +36,7 @@ const PostPage = ({ title, date, cover, category, content }: PostPageProps) => {
         <Spinner />
       </div>
     );
-  console.log(title, date, cover, category, content, "data");
+
   return (
     <Layout>
       <Head>
@@ -111,7 +111,7 @@ const PostPage = ({ title, date, cover, category, content }: PostPageProps) => {
             dangerouslySetInnerHTML={{ __html: marked(content) }}
           ></div>
           <div className="post-comments mt-8">
-            <Comments title={title} slug={slug} />
+            <Comments title={title} slug={(slug as string) ?? ""} />
           </div>
         </div>
       </div>
@@ -130,7 +130,11 @@ export function getStaticPaths() {
   };
 }
 
-export function getStaticProps({ params: { slug } }) {
+export function getStaticProps({
+  params: { slug },
+}: {
+  params: { slug: string };
+}) {
   const postData = getSinglePost(slug);
 
   return {

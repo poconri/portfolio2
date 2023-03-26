@@ -49,6 +49,7 @@ const getAllPostsData = (): Post[] => {
 // Get posts by page
 const getPostsByPage = (page = 1, limit = 6) => {
   const tempPosts = getAllPostsData();
+  console.log(tempPosts,'tempPosts')
   const posts = filterPostsByPage(tempPosts, page, limit);
   return {
     posts,
