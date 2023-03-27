@@ -17,7 +17,6 @@ import { SectionHeading } from "../components/utils";
 import { getPostsByPage, Post } from "../lib/blogging";
 
 const Homepage = ({ posts }: { posts: Post[] }) => {
-  const savePost = posts ? posts : [];
   return (
     <Layout>
       <Head>

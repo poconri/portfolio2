@@ -8,21 +8,21 @@ import { TimelineData } from "./EducationTimeline";
 
 const BURNDATA: TimelineData[] = [
   {
+    id: 2,
+    timeline: {
+      title: "Web Developer",
+      meta: "Startrack S.A",
+      text: "I mainly work with React with typescript, in a large GPS tracking project, where I have to develop new features and maintain the existing ones. Working with mobx",
+      year: "June 2022 - Currently",
+    },
+  },
+  {
     id: 1,
     timeline: {
       title: "Front-end web Developer",
       meta: "Unenmo",
       text: "I worked with Vue.js and mostly CSS. It was a business card business project, coding pixel perfect designs.",
       year: "Dec 2021 - May 2022",
-    },
-  },
-  {
-    id: 2,
-    timeline: {
-      title: "Front-end web Developer",
-      meta: "Startrack S.A",
-      text: "I mainly work with React with typescript, in a large GPS tracking project, where I have to develop new features and maintain the existing ones. Working with mobx",
-      year: "June 2022 - Currently",
     },
   },
 ];

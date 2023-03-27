@@ -12,21 +12,21 @@ export interface TimelineData extends TimelineItemProps {
 
 const BURNDATA: TimelineData[] = [
   {
-    id: 1,
-    timeline: {
-      title: "JavaScript Developer",
-      meta: "Platzi",
-      text: "My web development education at Platzi covered a wide range of topics, from the foundational concepts of HTML, CSS, and JavaScript, to the more complex tools and frameworks like React, TypeScript, and Redux.",
-      year: "2019 - 2022",
-    },
-  },
-  {
     id: 2,
     timeline: {
       title: "Computer Systems Engineering",
       meta: "Universidad Galileo Guatemala",
       text: " I'm currently stying computer systems engineer with experience in designing, developing and deploying complex systems for a variety of industries",
       year: "2023 - Currently",
+    },
+  },
+  {
+    id: 1,
+    timeline: {
+      title: "JavaScript Developer",
+      meta: "Platzi",
+      text: "My web development education at Platzi covered a wide range of topics, from the foundational concepts of HTML, CSS, and JavaScript, to the more complex tools and frameworks like React, TypeScript, and Redux.",
+      year: "2019 - 2022",
     },
   },
 ];
