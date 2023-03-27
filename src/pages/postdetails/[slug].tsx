@@ -13,19 +13,32 @@ import { Layout } from "../../components/layout";
 import { Spinner } from "../../components/utils";
 import Comments from "../../components/utils/Comments";
 
+interface Meta {
+  content: string;
+  name: string;
+}
+
 interface PostPageProps {
   title: string;
   date: string;
   cover: string;
   category: string[];
   content: string;
+  meta: string;
 }
 
-const PostPage = ({ title, date, cover, category, content }: PostPageProps) => {
+const PostPage = ({
+  title,
+  date,
+  cover,
+  category,
+  content,
+  meta,
+}: PostPageProps) => {
   const [mounted, setMounted] = useState(false);
   const router = useRouter();
   const { slug } = router.query;
-
+  const metaList: Meta[] = JSON.parse(meta);
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -41,6 +54,9 @@ const PostPage = ({ title, date, cover, category, content }: PostPageProps) => {
     <Layout>
       <Head>
         <title>{title} - Ramon Pocon - React Personal Portfolio Template</title>
+        {metaList.map((m, index) => (
+          <meta key={index} {...m} />
+        ))}
       </Head>
       <Breadcrumb
         title={title}

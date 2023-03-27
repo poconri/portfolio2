@@ -4,6 +4,33 @@ date: "2023-03-25T22:07:15.629Z"
 category: ["Typescript"]
 cover: "/images/blog/signature-function.png"
 thumb: "/images/blog/signature-function.png"
+meta:  '[
+  {
+    "name": "keywords",
+    "content": "JavaScript, Function Signature, Typescript, Programming"
+  },
+  {
+    "name": "description",
+    "content": "Understanding the signature of a function is essential in order to use it effectively and avoid common errors in JavaScript. This article explains the importance of function signatures and how they can be used to improve your code."
+  },
+  {
+    "name": "og:title",
+    "content": "The importance of understanding the signature of a function"
+  },
+  {
+    "name": "og:description",
+    "content": "Understanding the signature of a function is essential in order to use it effectively and avoid common errors in JavaScript. This article explains the importance of function signatures and how they can be used to improve your code."
+  },
+  {
+    "name": "og:url",
+    "content": "https://portfolio2-poconri.vercel.app/postdetails/the-importance-of-function-signature"
+  },
+  {
+    "name": "og:image",
+    "content": "https://portfolio2-poconri.vercel.app/images/blog/signature-function.png"
+  }
+]'
+
 ---
 
 In JavaScript, a function is a block of code that can be called to perform a specific task or calculation. One of the most important features of a function is its [signature](https://developer.mozilla.org/en-US/docs/Glossary/Signature/Function), which refers to the structure and set of parameters that are expected to be received by the function when it is called.
