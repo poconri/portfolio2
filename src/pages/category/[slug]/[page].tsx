@@ -9,14 +9,27 @@ import {
   getCategoryPaths,
   getPostsByCategory,
   getRecentPosts,
+  Post,
 } from "../../../lib/blogging";
 import { childrenAnimation } from "../../../lib/motion";
 import { createSlug } from "../../../lib";
 import { Layout } from "../../../components/layout";
 
-const CategoryPosts = ({ posts, hasMore, categories, recentPosts }) => {
+interface CategoryPostProps {
+  posts: Post[];
+  hasMore: boolean;
+  categories: string[];
+  recentPosts: Post[];
+}
+
+const CategoryPosts = ({
+  posts,
+  hasMore,
+  categories,
+  recentPosts,
+}: CategoryPostProps) => {
   const [mounted, setMounted] = useState(false);
-  const [uniqueCategories, setUniqueCategories] = useState([]);
+  const [uniqueCategories, setUniqueCategories] = useState<string[]>([]);
   const router = useRouter();
 
   useEffect(() => {
@@ -38,7 +51,7 @@ const CategoryPosts = ({ posts, hasMore, categories, recentPosts }) => {
         <title>Blogs - Bieber - React Personal Portfolio Template</title>
       </Head>
       <Breadcrumb
-        title={slug}
+        title={(slug as string) ?? "Blogs"}
         paths={[
           {
             name: "Home",
@@ -49,7 +62,7 @@ const CategoryPosts = ({ posts, hasMore, categories, recentPosts }) => {
             link: "/posts/1",
           },
           {
-            name: slug,
+            name: (slug as string) ?? "Blogs",
             link: "",
           },
         ]}
@@ -77,7 +90,7 @@ const CategoryPosts = ({ posts, hasMore, categories, recentPosts }) => {
                 {pageNumber !== "1" && (
                   <Link
                     href={`/category/${slug}/${String(
-                      parseInt(pageNumber) - 1
+                      parseInt(pageNumber as string) - 1
                     )}`}
                   >
                     <a className="btn btn-small">
@@ -88,7 +101,7 @@ const CategoryPosts = ({ posts, hasMore, categories, recentPosts }) => {
                 {hasMore && (
                   <Link
                     href={`/category/${slug}/${String(
-                      parseInt(pageNumber) + 1
+                      parseInt(pageNumber as string) + 1
                     )}`}
                   >
                     <a className="btn btn-small">
@@ -160,9 +173,7 @@ const CategoryPosts = ({ posts, hasMore, categories, recentPosts }) => {
                             {
                               day: "2-digit",
                             }
-                          )}, ${new Date(post.date).getFullYear({
-                            year: "numeric",
-                          })}`}
+                          )}, ${new Date(post.date).getFullYear()}`}
                         </small>
                       </li>
                     ))}
@@ -188,7 +199,7 @@ export function getStaticPaths() {
   };
 }
 
-export function getStaticProps({ params: { slug, page } }) {
+export function getStaticProps({ params: { slug, page } }: any) {
   const { posts, hasMore } = getPostsByCategory(slug, page, 6);
   const categories = getAllCategories();
   const recentPosts = getRecentPosts();

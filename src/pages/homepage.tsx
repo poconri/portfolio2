@@ -14,14 +14,10 @@ import {
 } from "../components/containers";
 import { Layout } from "../components/layout";
 import { SectionHeading } from "../components/utils";
-import { getPostsByPage } from "../lib/blogging";
+import { getPostsByPage, Post } from "../lib/blogging";
 
-interface HomePageProps {
-  posts?: any;
-}
-
-const Homepage = ({ posts }: HomePageProps) => {
-  console.log(posts, "post server side");
+const Homepage = ({ posts }: { posts: Post[] }) => {
+  const savePost = posts ? posts : [];
   return (
     <Layout>
       <Head>
@@ -160,14 +156,3 @@ const Homepage = ({ posts }: HomePageProps) => {
 };
 
 export default Homepage;
-
-export function getStaticProps() {
-  const { posts } = getPostsByPage();
-
-  return {
-    props: {
-      posts,
-    },
-    revalidate: 10,
-  };
-}

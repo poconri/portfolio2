@@ -10,13 +10,21 @@ import {
   getPagesPath,
   getPostsByPage,
   getRecentPosts,
+  Post,
 } from "../../lib/blogging";
 import { childrenAnimation } from "../../lib/motion";
 import { Layout } from "../../components/layout";
 
-const Posts = ({ posts, hasMore, categories, recentPosts }: any) => {
+interface PostsProps {
+  posts: Post[];
+  hasMore: boolean;
+  categories: string[];
+  recentPosts: Post[];
+}
+
+const Posts = ({ posts, hasMore, categories, recentPosts }: PostsProps) => {
   const [mounted, setMounted] = useState(false);
-  const [uniqueCategories, setUniqueCategories] = useState([]);
+  const [uniqueCategories, setUniqueCategories] = useState<string[]>([]);
 
   const router = useRouter();
   const { slug: page } = router.query;
@@ -72,14 +80,14 @@ const Posts = ({ posts, hasMore, categories, recentPosts }: any) => {
               </div>
               <div className="flex gap-3 pt-10 text-center">
                 {page !== "1" && (
-                  <Link href={`/posts/${String(parseInt(page) - 1)}`}>
+                  <Link href={`/posts/${String(parseInt(page as string) - 1)}`}>
                     <a className="btn btn-small">
                       <span>Prev</span>
                     </a>
                   </Link>
                 )}
                 {hasMore && (
-                  <Link href={`/posts/${String(parseInt(page) + 1)}`}>
+                  <Link href={`/posts/${String(parseInt(page as string) + 1)}`}>
                     <a className="btn btn-small">
                       <span>Next</span>
                     </a>
@@ -149,9 +157,7 @@ const Posts = ({ posts, hasMore, categories, recentPosts }: any) => {
                             {
                               day: "2-digit",
                             }
-                          )}, ${new Date(post.date).getFullYear({
-                            year: "numeric",
-                          })}`}
+                          )}, ${new Date(post.date).getFullYear()}`}
                         </small>
                       </li>
                     ))}
@@ -177,7 +183,7 @@ export function getStaticPaths() {
   };
 }
 
-export function getStaticProps({ params: { slug } }) {
+export function getStaticProps({ params: { slug } }: any) {
   const { posts, hasMore } = getPostsByPage(parseInt(slug));
   const categories = getAllCategories();
   const recentPosts = getRecentPosts();

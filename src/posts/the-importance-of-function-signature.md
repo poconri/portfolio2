@@ -2,8 +2,8 @@
 title: "The importance of understanding the signature of a function"
 date: "2023-03-25T22:07:15.629Z"
 category: ["Typescript"]
-cover: "/images/blog/blog-image-1.jpg"
-thumb: "/images/blog/sm/blog-image-1.jpg"
+cover: "/images/blog/signature-function.png"
+thumb: "/images/blog/signature-function.png"
 ---
 
 In JavaScript, a function is a block of code that can be called to perform a specific task or calculation. One of the most important features of a function is its [signature](https://developer.mozilla.org/en-US/docs/Glossary/Signature/Function), which refers to the structure and set of parameters that are expected to be received by the function when it is called.
