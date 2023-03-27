@@ -39,6 +39,7 @@ const PostPage = ({
   const router = useRouter();
   const { slug } = router.query;
   const metaList: Meta[] = JSON.parse(meta);
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -123,7 +124,7 @@ const PostPage = ({
             </div>
           </div>
           <div
-            className="post-body mt-4"
+            className="post-body mt-4 text-justify"
             dangerouslySetInnerHTML={{ __html: marked(content) }}
           ></div>
           <div className="post-comments mt-8">
