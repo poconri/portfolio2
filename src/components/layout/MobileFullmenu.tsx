@@ -52,7 +52,7 @@ const MobileFullmenu = ({ fullMenuHandler }: MobileFullmenuProps) => {
                 </a>
               </Link>
             </li>
-            <li className="block">
+            {/* <li className="block">
               <Link href="/works">
                 <a
                   className="group relative inline-block cursor-pointer overflow-hidden py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
@@ -62,7 +62,7 @@ const MobileFullmenu = ({ fullMenuHandler }: MobileFullmenuProps) => {
                   <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100"></span>
                 </a>
               </Link>
-            </li>
+            </li> */}
             <li className="block">
               <Link href="/posts/1">
                 <a

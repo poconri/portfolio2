@@ -107,7 +107,7 @@ const MobileNavigation = ({ changeState }: MobileNavigationProps) => {
               </ScrollLink>
             )}
           </li>
-          <li className="block">
+          {/* <li className="block">
             {checkroute ? (
               <Link href="/">
                 <a
@@ -133,7 +133,7 @@ const MobileNavigation = ({ changeState }: MobileNavigationProps) => {
                 <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100"></span>
               </ScrollLink>
             )}
-          </li>
+          </li> */}
           <li className="block">
             <Link href="/posts/1">
               <a
