@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }: any) {
           />
           <meta
             name="keywords"
-            content="Frontend Developer, React, JavaScript, TypeScript, Portfolio"
+            content="Frontend Developer, React, JavaScript, TypeScript, Portfolio, Next.js, Ramon Pocon"
           />
           <meta name="author" content="Ramon Pocon" />
           <meta name="theme-color" content="#72E2AE" />
