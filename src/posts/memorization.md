@@ -27,7 +27,7 @@ meta:  '[
   },
   {
     "name": "og:url",
-    "content": "https://portfolio2-poconri.vercel.app/postdetails/memoraization"
+    "content": "https://portfolio2-poconri.vercel.app/postdetails/memorization"
   },
   {
     "name": "og:image",
