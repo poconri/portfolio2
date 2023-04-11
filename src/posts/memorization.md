@@ -91,3 +91,5 @@ const memoizedFibonacci = memoize<number, number>(fibonacci);
 ```
 
 In this example, we first define the memoize function as before. Then, we create a fibonacci function that calculates Fibonacci numbers recursively. Finally, we create a memoizedFibonacci function by memoizing the original fibonacci function. Using memoizedFibonacci, you can now calculate Fibonacci numbers more efficiently by reusing the stored results for previously computed inputs.
+
+Next subject I'd like to talk about is the concept of currying. I'll be writing about it in the next post. Stay tuned!
