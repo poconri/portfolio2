@@ -52,6 +52,8 @@ const PostPage = ({
       </div>
     );
 
+  const slugValue = typeof slug === "string" ? slug : "";
+
   return (
     <Layout>
       <Head>
@@ -128,7 +130,7 @@ const PostPage = ({
             <MarkdownRenderer content={content} />
           </>
           <div className="post-comments mt-8">
-            <Comments title={title} slug={(slug as string) ?? ""} />
+            <Comments key={slugValue} title={title} slug={slugValue} />
           </div>
         </div>
       </div>

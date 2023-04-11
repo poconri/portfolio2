@@ -23,9 +23,9 @@ const Comments = ({ title, slug }: CommentsProps) => {
 
   return (
     <DiscussionEmbed
-      shortname={process.env.NEXT_PUBLIC_DISCUSS_SHORTNAME || ""}
+      shortname={process.env.NEXT_PUBLIC_DISCUSS_SHORTNAME ?? ""}
       config={{
-        url: process.env.NEXT_PUBLIC_SITE_URL,
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}/postdetails/${slug}`,
         identifier: slug,
         title: title,
       }}
