@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-
-import { marked } from "marked";
+import { Renderer, marked } from "marked";
 import Image from "next/image";
 import Link from "next/link";
 import { createSlug } from "../../lib";
@@ -12,6 +11,8 @@ import { Breadcrumb } from "../../components/elements";
 import { Layout } from "../../components/layout";
 import { Spinner } from "../../components/utils";
 import Comments from "../../components/utils/Comments";
+import React from "react";
+import MarkdownRenderer from "../../components/markdown-render";
 
 interface Meta {
   content: string;
@@ -123,10 +124,9 @@ const PostPage = ({
               </p>
             </div>
           </div>
-          <div
-            className="post-body mt-4 text-justify"
-            dangerouslySetInnerHTML={{ __html: marked(content) }}
-          ></div>
+          <>
+            <MarkdownRenderer content={content} />
+          </>
           <div className="post-comments mt-8">
             <Comments title={title} slug={(slug as string) ?? ""} />
           </div>

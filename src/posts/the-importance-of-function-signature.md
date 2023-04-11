@@ -1,7 +1,7 @@
 ---
 title: "The importance of understanding the signature of a function"
 date: "2023-03-25T22:07:15.629Z"
-category: ["Typescript"]
+category: ["typescript"]
 cover: "/images/blog/signature-function.png"
 thumb: "/images/blog/signature-function.png"
 meta:  '[
