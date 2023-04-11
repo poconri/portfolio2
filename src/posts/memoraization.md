@@ -18,16 +18,20 @@ meta:  '[
     "content": "Exploring Memoization in Functional Programming"
   },
   {
+    "name": "og:type",
+    "content": "article"
+  },
+  {
     "name": "og:description",
     "content": "Discover the power of memoization in functional programming and learn how to apply it in JavaScript and TypeScript to improve the performance of your applications."
   },
   {
     "name": "og:url",
-    "content": "https://portfolio2-poconri.vercel.app/postdetails/functional-programming"
+    "content": "https://portfolio2-poconri.vercel.app/postdetails/memoraization"
   },
   {
     "name": "og:image",
-    "content": "https://portfolio2-poconri.vercel.app/images/blog/functional_programming.webp"
+    "content": "https://portfolio2-poconri.vercel.app/images/blog/fibonacci.avif"
   }
 ]'
 ---
@@ -73,7 +77,7 @@ const memoize = (f) => {
 
 Using this memoization function, you can improve the performance of computationally expensive functions by caching their results for the same input parameters. This is particularly useful when working with recursive functions, such as calculating Fibonacci numbers, where many function calls with the same parameters may occur.
 
-...This is particularly useful when working with recursive functions, such as calculating Fibonacci numbers for example, where many function calls with the same parameters may occur. Let's see an example using the Fibonacci function with our TypeScript memoization implementation:
+Now for example the Fibonacci numbers, where many function calls with the same parameters may occur. Let's see an example using the Fibonacci function with our TypeScript memoization implementation:
 
 ```typescript
 const fibonacci = (n: number): number => {

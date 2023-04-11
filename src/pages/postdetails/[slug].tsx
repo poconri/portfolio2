@@ -58,9 +58,20 @@ const PostPage = ({
     <Layout>
       <Head>
         <title>{title} - Ramon Pocon - React Personal Portfolio Template</title>
-        {metaList.map((m, index) => (
-          <meta key={index} {...m} />
-        ))}
+        {metaList.map((meta, index) => {
+          if (meta.name.startsWith("og:")) {
+            const metaName = meta.name.replace("og:", "");
+            return (
+              <meta
+                key={index}
+                name={metaName}
+                property={meta.name}
+                content={meta.content}
+              />
+            );
+          }
+          return <meta key={index} {...meta} />;
+        })}
       </Head>
       <Breadcrumb
         title={title}
