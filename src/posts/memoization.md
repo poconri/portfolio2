@@ -7,7 +7,7 @@ thumb: "/images/blog/fibonacci.avif"
 meta:  '[
   {
     "name": "keywords",
-    "content": "JavaScript, Memoization, TypeScript, Functional Programming"
+    "content": "javaScript, memoization, typeScript, functional programming"
   },
   {
     "name": "description",
@@ -15,7 +15,7 @@ meta:  '[
   },
   {
     "name": "og:title",
-    "content": "Exploring Memoization in Functional Programming"
+    "content": "Exploring memoization in Functional Programming"
   },
   {
     "name": "og:type",
@@ -27,7 +27,7 @@ meta:  '[
   },
   {
     "name": "og:url",
-    "content": "https://portfolio2-poconri.vercel.app/postdetails/memorization"
+    "content": "https://portfolio2-poconri.vercel.app/postdetails/memoization"
   },
   {
     "name": "og:image",
