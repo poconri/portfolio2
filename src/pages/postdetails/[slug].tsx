@@ -59,9 +59,7 @@ const PostPage = ({
     <>
       <Layout>
         <Head>
-          <title>
-            {title} - Ramon Pocon - React Personal Portfolio Template
-          </title>
+          <title>{title} - Ramon Pocon - Blog</title>
           {metaList.map((meta, index) => {
             if (meta.name.startsWith("og:")) {
               const metaName = meta.name.replace("og:", "");

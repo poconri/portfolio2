@@ -1,7 +1,7 @@
 ---
 title: "Currying in Functional Programming: Creating HTML Elements with JavaScript and TypeScript"
 date: '2023-04-18T04:41:08.922Z'
-category: ["javascript", "typescript", "functional programming"]
+category: ["JavaScript", "TypeScript", "Functional programming"]
 cover: "/images/blog/builder.png"
 thumb: "/images/blog/builder.png"
 meta: '[

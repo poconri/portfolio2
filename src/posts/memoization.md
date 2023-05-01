@@ -1,7 +1,7 @@
 ---
 title: "Exploring Memoization in Functional Programming"
 date: '2023-04-08T03:21:03.004Z'
-category: ["javascript", "typescript", "functional programming"]
+category: ["Javascript", "TypeScript", "Functional programming"]
 cover: "/images/blog/fibonacci.avif"
 thumb: "/images/blog/fibonacci.avif"
 meta:  '[
