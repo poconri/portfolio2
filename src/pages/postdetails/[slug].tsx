@@ -71,6 +71,17 @@ const PostPage = ({
                   content={meta.content}
                 />
               );
+            } else if (meta.name.startsWith("twitter:")) {
+              return (
+                <>
+                  <meta key={index} name={meta.name} content={meta.content} />
+                  <meta
+                    key={index}
+                    property={meta.name}
+                    content={meta.content}
+                  />
+                </>
+              );
             }
             return <meta key={index} {...meta} />;
           })}

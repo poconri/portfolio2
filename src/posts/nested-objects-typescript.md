@@ -18,6 +18,10 @@ meta: '[
 "content": "Accessing Nested Objects with TypeScript: A Guide to Avoiding Errors"
 },
 {
+"name": "twitter:title",
+"content": "Accessing Nested Objects with TypeScript: A Guide to Avoiding Errors"
+},
+{
 "name": "og:type",
 "content": "article"
 },
