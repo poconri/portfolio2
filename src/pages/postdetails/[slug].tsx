@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { Renderer, marked } from "marked";
 import Image from "next/image";
 import Link from "next/link";
 import { createSlug } from "../../lib";
@@ -62,27 +61,29 @@ const PostPage = ({
           <title>{title} - Ramon Pocon - Blog</title>
           {metaList.map((meta, index) => {
             if (meta.name.startsWith("og:")) {
-              const metaName = meta.name.replace("og:", "");
               return (
-                <meta
-                  key={index}
-                  name={metaName}
-                  property={meta.name}
-                  content={meta.content}
-                />
+                <meta key={index} property={meta.name} content={meta.content} />
               );
             } else if (meta.name.startsWith("twitter:")) {
               return (
-                <meta
-                  key={index}
-                  name={meta.name}
-                  property={meta.name}
-                  content={meta.content}
-                />
+                <meta key={index} property={meta.name} content={meta.content} />
               );
             }
             return <meta key={index} {...meta} />;
           })}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "BlogPosting",
+                headline: title,
+                image: [cover],
+                datePublished: date,
+                dateModified: date,
+              }),
+            }}
+          />
         </Head>
         <Breadcrumb
           title={title}
