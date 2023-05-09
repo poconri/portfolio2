@@ -25,6 +25,24 @@ const BURNDATA: TimelineData[] = [
       year: "Dec 2021 - May 2022",
     },
   },
+  {
+    id: 0,
+    timeline: {
+      title: "WFM Lead",
+      meta: "247.ai",
+      text: `Development and enhancement of real-time
+      reports using data analysis techniques and
+      communication with operations teams and
+      clients.
+      Construction of schedules, forecasts, and
+      projections using programming algorithms
+      and techniques.
+      Implementation of accrual accounting and
+      payroll processing, including calculating
+      worked hours and bonus metrics.`,
+      year: "Sept 2018 - June 2022",
+    },
+  },
 ];
 
 const JobTimeline = () => {
