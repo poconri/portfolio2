@@ -6,15 +6,10 @@ import { getInformation } from "../../fetchers";
 import { childrenAnimation } from "../../lib/motion";
 import ContactForm from "./ContactForm";
 
-const BURNDATA = {
-  phoneNumbers: ["+502 5029 6653"],
-  emailAddress: ["pocon.ri@gmail.com"],
-};
-
 const ContactSection = () => {
-  // const { data } = useQuery("information", getInformation);
+  const { data } = useQuery("information", getInformation);
 
-  // if (!data) return null;
+  if (!data) return null;
 
   return (
     <div className="grid grid-cols-9 gap-7">
@@ -37,7 +32,7 @@ const ContactSection = () => {
               </span>
               <div className="content">
                 <h5 className="mb-2">Contact on phone</h5>
-                {BURNDATA.phoneNumbers.map((number: string, index: number) => (
+                {data.phoneNumbers.map((number: string, index: number) => (
                   <p className="mb-0" key={index}>
                     <Link href={`tel:${number.split("-").join("")}`}>
                       {number}
@@ -52,11 +47,9 @@ const ContactSection = () => {
               </span>
               <div className="content">
                 <h5 className="mb-2">Contact on mail</h5>
-                {BURNDATA.emailAddress.map((email: string, index: number) => (
+                {data.emailAddress.map((email: string, index: number) => (
                   <p className="mb-0" key={index}>
-                    <Link href={`mailto:${email}`}>
-                      {email}
-                    </Link>
+                    <Link href={`mailto:${email}`}>{email}</Link>
                   </p>
                 ))}
               </div>

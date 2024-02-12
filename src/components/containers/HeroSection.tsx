@@ -16,27 +16,14 @@ interface HeroSectionProps {
   typed?: boolean;
 }
 
-const BURNDATA = {
-  thumbImage: photo,
-  fullName: "Ramon Pocón",
-  bio: "I am an experienced full stack developer specializing in React and Typescript with a passion for collaborating with development teams and designers to create high-quality web products that exceed user expectations. I am passionate about web accessibility and performance optimization. If you're interested in working together, please don't hesitate to send me a message.",
-  socialAddress: {
-    facebook: "https://www.facebook.com/ramon.ignacio.7",
-    twitter: "https://twitter.com/kaozgt",
-    github: "https://github.com/poconri",
-    linkedin:
-      "https://www.linkedin.com/in/ramon-ignacio-poc%C3%B3n-elias-23331738/",
-  },
-};
-
 const HeroSection = ({
   blurred,
   scroll = true,
   typed = true,
 }: HeroSectionProps) => {
-  // const { data } = useQuery("information", getInformation);
+  const { data } = useQuery("information", getInformation);
 
-  // if(!data) return null;
+  if (!data) return null;
 
   return (
     <div className="herosection relative overflow-hidden">
@@ -64,8 +51,8 @@ const HeroSection = ({
                   <Image
                     loader={imageLoader}
                     unoptimized={true}
-                    src={BURNDATA.thumbImage}
-                    alt={BURNDATA.fullName}
+                    src={photo}
+                    alt={data.fullName}
                     height={150}
                     width={150}
                     layout="responsive"
@@ -88,9 +75,9 @@ const HeroSection = ({
                 {typed ? (
                   <TypeAnimation
                     sequence={[
-                      BURNDATA.fullName,
+                      data.fullName,
                       1000,
-                      "Frontend Developer",
+                      "Full stack Developer",
                       1000,
                       "Web Developer",
                       1000,
@@ -104,20 +91,7 @@ const HeroSection = ({
                     repeat={Infinity}
                   />
                 ) : (
-                  // <ReactTyped
-                  //   loop
-                  //   typeSpeed={100}
-                  //   backSpeed={20}
-                  //   backDelay={2000}
-                  //   strings={[
-                  //     BURNDATA.fullName,
-                  //     "Frontend Developer",
-                  //     "Web Developer",
-                  //     "Typescript enthusiast 🚀",
-                  //   ]}
-                  //   className="text-primary"
-                  // />
-                  <span className="text-primary">{BURNDATA.fullName}</span>
+                  <span className="text-primary">{data``.fullName}</span>
                 )}
               </motion.h1>
               <motion.p
@@ -128,7 +102,7 @@ const HeroSection = ({
                 variants={childrenAnimation}
                 className="lead mb-0"
               >
-                {BURNDATA.bio}
+                {data.bio}
               </motion.p>
               <motion.div
                 initial="hidden"
@@ -138,7 +112,7 @@ const HeroSection = ({
                 variants={childrenAnimation}
                 className="herosection-socialicons mt-7 text-center"
               >
-                <SocialIcons data={BURNDATA.socialAddress} />
+                <SocialIcons data={data.socialAddress} />
               </motion.div>
             </div>
           </div>

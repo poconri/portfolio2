@@ -1,6 +1,9 @@
 import { useCallback, useRef, useState, useEffect } from "react";
-import Autoplay from "swiper";
-import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
+import {
+  Swiper as SwiperComponent,
+  SwiperRef,
+  SwiperSlide,
+} from "swiper/react";
 import { Blog } from "../elements";
 import { Spinner } from "../utils";
 
@@ -42,8 +45,7 @@ const BlogSection = ({ posts }: BlogSectionProps) => {
 
   return (
     <div className="swiper-holder">
-      <Swiper
-        modules={[Autoplay]}
+      <SwiperComponent
         spaceBetween={28}
         slidesPerView={3}
         autoplay={{
@@ -71,7 +73,7 @@ const BlogSection = ({ posts }: BlogSectionProps) => {
               </div>
             </SwiperSlide>
           ))}
-      </Swiper>
+      </SwiperComponent>
       <button className="swiper-button-prev" onClick={handlePrev}></button>
       <button className="swiper-button-next" onClick={handleNext}></button>
     </div>

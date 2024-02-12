@@ -1,7 +1,5 @@
 const withPlugins = require("next-compose-plugins");
-const withPWA = require('next-pwa')({
-    dest: 'public'
-  })
+const withPWA = require('next-pwa')
 const runtimeCaching = require("next-pwa/cache");
 
 const nextConfig = {
@@ -11,6 +9,7 @@ const nextConfig = {
         loader: "custom",
         path: "/",
     },
+    output: 'export',
 };
 
 module.exports = withPlugins(

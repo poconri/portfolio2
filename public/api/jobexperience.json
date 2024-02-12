@@ -1,23 +1,29 @@
 [
     {
-        "id": 1,
-        "title": "UI/UX Designer",
-        "meta": "Abc Company.",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur donec gravida ullamcorper cum id. Sit viverra donec in ornare euismod.",
-        "year": "2015 - 2017"
+      "id": 2,
+      "timeline": {
+        "title": "Web Developer",
+        "meta": "Startrack S.A",
+        "text": "I mainly work with React with typescript, in a large GPS tracking project, where I have to develop new features and maintain the existing ones. Working with mobx",
+        "year": "June 2022 - Currently"
+      }
     },
     {
-        "id": 2,
-        "title": "Front-end Developer",
-        "meta": "Def Company.",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur donec gravida ullamcorper cum id. Sit viverra donec in ornare euismod.",
-        "year": "2017 - 2019"
+      "id": 1,
+      "timeline": {
+        "title": "Front-end web Developer",
+        "meta": "Unenmo",
+        "text": "I worked with Vue.js and mostly CSS. It was a business card business project, coding pixel perfect designs.",
+        "year": "Dec 2021 - May 2022"
+      }
     },
     {
-        "id": 3,
-        "title": "Back-end Developer",
-        "meta": "Ghi Company.",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur donec gravida ullamcorper cum id. Sit viverra donec in ornare euismod.",
-        "year": "2019 - Present"
+      "id": 0,
+      "timeline": {
+        "title": "WFM Lead",
+        "meta": "247.ai",
+        "text": "Development and enhancement of real-time reports using data analysis techniques and communication with operations teams and clients. Construction of schedules, forecasts, and projections using programming algorithms and techniques. Implementation of accrual accounting and payroll processing, including calculating worked hours and bonus metrics.",
+        "year": "Sept 2018 - June 2022"
+      }
     }
-]
+  ]

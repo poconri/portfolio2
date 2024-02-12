@@ -1,7 +1,10 @@
 import { useCallback, useRef } from "react";
 import { useQuery } from "react-query";
-import Autoplay from "swiper";
-import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
+import {
+  Swiper as SwiperComponent,
+  SwiperRef,
+  SwiperSlide,
+} from "swiper/react";
 import { getClientReviews } from "../../fetchers";
 import { Review } from "../elements";
 
@@ -24,8 +27,7 @@ const ReviewsSection = () => {
 
   return (
     <div className="swiper-holder">
-      <Swiper
-        modules={[Autoplay]}
+      <SwiperComponent
         spaceBetween={28}
         slidesPerView={3}
         autoplay={{
@@ -52,7 +54,7 @@ const ReviewsSection = () => {
             </div>
           </SwiperSlide>
         ))}
-      </Swiper>
+      </SwiperComponent>
       <button className="swiper-button-prev" onClick={handlePrev}></button>
       <button className="swiper-button-next" onClick={handleNext}></button>
     </div>

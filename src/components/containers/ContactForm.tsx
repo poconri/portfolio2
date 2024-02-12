@@ -1,4 +1,4 @@
-import { FormHTMLAttributes, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { settings } from "../../settings/settings";

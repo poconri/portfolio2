@@ -6,23 +6,10 @@ import { getInformation } from "../../fetchers";
 import { useQuery } from "react-query";
 import photo from "../../assets/photo.jpg";
 
-const BURNDATA = {
-  largeImage: photo,
-  fullName: "Ramon Pocón",
-  firstName: "Ramon",
-  lastName: "Pocón",
-  age: 33,
-  nationality: "Guatemalan",
-  location: "Guatemala City, Guatemala",
-  languages: ["Spanish", "English"],
-  address: null,
-  freelance: null,
-};
-
 const AboutSection = () => {
-  // const { data } = useQuery("information", getInformation);
+  const { data } = useQuery("information", getInformation);
 
-  // if (!data) return null;
+  if (!data) return null;
 
   return (
     <div className="grid grid-cols-2 items-center gap-7">
@@ -43,15 +30,14 @@ const AboutSection = () => {
             <Image
               loader={imageLoader}
               unoptimized={true}
-              src={BURNDATA.largeImage}
+              src={photo}
               style={{
                 backgroundColor: "#162033",
               }}
               height={422}
               width={660}
               objectFit="contain"
-              layout="responsive"
-              alt={BURNDATA.fullName}
+              alt={data.fullName}
               placeholder="blur"
               blurDataURL={`data:image/svg+xml;base64,${toBase64(
                 shimmer(660, 422)
@@ -70,63 +56,63 @@ const AboutSection = () => {
           className="about-content"
         >
           <h3>
-            Hi, I am <span className="text-primary">{BURNDATA.fullName}</span>
+            Hi, I am <span className="text-primary">{data.fullName}</span>
           </h3>
           <ul className="styledlist">
-            {BURNDATA.firstName && (
+            {data.firstName && (
               <li className="text-lg">
                 <strong className="inline-block min-w-[120px] font-medium">
                   First Name{" "}
                 </strong>
-                : {BURNDATA.firstName}
+                : {data.firstName}
               </li>
             )}
-            {BURNDATA.lastName && (
+            {data.lastName && (
               <li className="text-lg">
                 <strong className="inline-block min-w-[120px] font-medium">
                   Last Name{" "}
                 </strong>
-                : {BURNDATA.lastName}
+                : {data.lastName}
               </li>
             )}
-            {BURNDATA.age && (
+            {data.age && (
               <li className="text-lg">
                 <strong className="inline-block min-w-[120px] font-medium">
                   Age{" "}
                 </strong>
-                : {BURNDATA.age} years
+                : {data.age} years
               </li>
             )}
-            {BURNDATA.nationality && (
+            {data.nationality && (
               <li className="text-lg">
                 <strong className="inline-block min-w-[120px] font-medium">
                   Nationality{" "}
                 </strong>
-                : {BURNDATA.nationality}
+                : {data.nationality}
               </li>
             )}
-            {BURNDATA.languages.length ? (
+            {data.languages.length ? (
               <li className="text-lg">
                 <strong className="inline-block min-w-[120px] font-medium">
                   Languages{" "}
                 </strong>
-                : {BURNDATA.languages.join(", ")}
+                : {data.languages.join(", ")}
               </li>
             ) : null}
-            {BURNDATA.address && (
+            {data.address && (
               <li className="text-lg">
                 <strong className="inline-block min-w-[120px] font-medium">
                   Address{" "}
                 </strong>
-                : {BURNDATA.address}
+                : {data.address}
               </li>
             )}
-            {BURNDATA.freelance && (
+            {data.freelance && (
               <li className="text-lg">
                 <strong className="inline-block min-w-[120px] font-medium">
                   Freelance{" "}
                 </strong>
-                : {BURNDATA.freelance}
+                : {data.freelance}
               </li>
             )}
           </ul>

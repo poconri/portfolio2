@@ -1,17 +1,14 @@
 {
-    "firstName": "Joseph",
-    "lastName": "Bieber",
-    "fullName": "Joseph Bieber",
+    "firstName": "Ramon",
+    "lastName": "Pocón",
+    "fullName": "Ramon Pocón",
     "thumbImage": "/images/formal-image.png",
     "largeImage": "/images/about-image.jpg",
-    "bio": "I am a frontend web developer. I can provide clean code and pixel perfect design. I also make website more & more interactive with web animations.",
-    "age": 27,
-    "nationality": "American",
-    "languages": [
-        "English",
-        "French"
-    ],
-    "address": "121 King Street, Melbourne, United States",
+    "bio": "I am a full stack developer. I can provide clean code and pixel perfect design. I also make website more & more interactive with web animations.",
+    "age": 34,
+    "nationality": "Guatemalan",
+    "languages": ["Spanish", "English"],
+    "address": null,
     "freelance": "Available",
     "socialAddress": {
         "facebook": "https://facebook.com",
@@ -20,12 +17,6 @@
         "linkedin": "https://linkedin.com",
         "dribbble": "https://dribbble.com"
     },
-    "phoneNumbers": [
-        "+012-3456-7891",
-        "+012-3456-7892"
-    ],
-    "emailAddress": [
-        "demomail@demo.com",
-        "demomail2@demo.com"
-    ]
+    "phoneNumbers": ["+502 5029 6653"],
+    "emailAddress": ["pocon.ri@gmail.com"]
 }
