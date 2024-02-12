@@ -92,10 +92,9 @@ const CategoryPosts = ({
                     href={`/category/${slug}/${String(
                       parseInt(pageNumber as string) - 1
                     )}`}
+                    className="btn btn-small"
                   >
-                    <a className="btn btn-small">
-                      <span>Prev</span>
-                    </a>
+                    <span>Prev</span>
                   </Link>
                 )}
                 {hasMore && (
@@ -103,10 +102,9 @@ const CategoryPosts = ({
                     href={`/category/${slug}/${String(
                       parseInt(pageNumber as string) + 1
                     )}`}
+                    className="btn btn-small"
                   >
-                    <a className="btn btn-small">
-                      <span>Next</span>
-                    </a>
+                    <span>Next</span>
                   </Link>
                 )}
               </div>
@@ -127,18 +125,19 @@ const CategoryPosts = ({
                   <ul className="styledlist mb-0 list-none pl-0">
                     {uniqueCategories.map((category, i) => (
                       <li key={i}>
-                        <Link href={`/category/${createSlug(category)}/1`}>
-                          <a className="clearfix hover:text-primary">
-                            {category}
-                            <span className="float-right">
-                              (
-                              {
-                                categories.filter((cat) => cat === category)
-                                  .length
-                              }
-                              )
-                            </span>
-                          </a>
+                        <Link
+                          href={`/category/${createSlug(category)}/1`}
+                          className="clearfix hover:text-primary"
+                        >
+                          {category}
+                          <span className="float-right">
+                            (
+                            {
+                              categories.filter((cat) => cat === category)
+                                .length
+                            }
+                            )
+                          </span>
                         </Link>
                       </li>
                     ))}
@@ -159,10 +158,11 @@ const CategoryPosts = ({
                     {recentPosts.map((post, index) => (
                       <li key={index} className="mb-4 last:mb-0">
                         <p className="mb-0">
-                          <Link href={`/postdetails/${post.slug}`}>
-                            <a className="text-heading no-underline hover:text-primary hover:underline">
-                              {post.title}{" "}
-                            </a>
+                          <Link
+                            href={`/postdetails/${post.slug}`}
+                            className="text-heading no-underline hover:text-primary hover:underline"
+                          >
+                            {post.title}{" "}
                           </Link>
                         </p>
                         <small className="text-body">

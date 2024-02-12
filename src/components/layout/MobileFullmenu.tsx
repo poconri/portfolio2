@@ -20,36 +20,33 @@ const MobileFullmenu = ({ fullMenuHandler }: MobileFullmenuProps) => {
         <nav className="sidenav-mobilmenu relative max-h-full w-full overflow-y-auto">
           <ul className="mb-0 list-none pl-0">
             <li className="block">
-              <Link href="/">
-                <a
-                  className="group relative inline-block cursor-pointer overflow-hidden py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
-                  onClick={(e) => fullMenuHandler(false)}
-                >
-                  Home
-                  <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100"></span>
-                </a>
+              <Link
+                href="/"
+                className="group relative inline-block cursor-pointer overflow-hidden py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
+                onClick={(e) => fullMenuHandler(false)}
+              >
+                Home
+                <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100"></span>
               </Link>
             </li>
             <li className="block">
-              <Link href="/about">
-                <a
-                  className="group relative inline-block cursor-pointer overflow-hidden py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
-                  onClick={(e) => fullMenuHandler(false)}
-                >
-                  About
-                  <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100"></span>
-                </a>
+              <Link
+                href="/about"
+                className="group relative inline-block cursor-pointer overflow-hidden py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
+                onClick={(e) => fullMenuHandler(false)}
+              >
+                About
+                <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100"></span>
               </Link>
             </li>
             <li className="block">
-              <Link href="/resume">
-                <a
-                  className="group relative inline-block cursor-pointer overflow-hidden py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
-                  onClick={(e) => fullMenuHandler(false)}
-                >
-                  Resume
-                  <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100"></span>
-                </a>
+              <Link
+                href="/resume"
+                className="group relative inline-block cursor-pointer overflow-hidden py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
+                onClick={(e) => fullMenuHandler(false)}
+              >
+                Resume
+                <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100"></span>
               </Link>
             </li>
             {/* <li className="block">
@@ -64,25 +61,23 @@ const MobileFullmenu = ({ fullMenuHandler }: MobileFullmenuProps) => {
               </Link>
             </li> */}
             <li className="block">
-              <Link href="/posts/1">
-                <a
-                  className="group relative inline-block cursor-pointer overflow-hidden py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
-                  onClick={(e) => fullMenuHandler(false)}
-                >
-                  Blogs
-                  <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100"></span>
-                </a>
+              <Link
+                href="/posts/1"
+                className="group relative inline-block cursor-pointer overflow-hidden py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
+                onClick={(e) => fullMenuHandler(false)}
+              >
+                Blogs
+                <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100"></span>
               </Link>
             </li>
             <li className="block">
-              <Link href="/contact">
-                <a
-                  className="group relative inline-block cursor-pointer overflow-hidden py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
-                  onClick={(e) => fullMenuHandler(false)}
-                >
-                  Contact
-                  <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100"></span>
-                </a>
+              <Link
+                href="/contact"
+                className="group relative inline-block cursor-pointer overflow-hidden py-2 text-lg uppercase tracking-wider text-heading before:text-primary"
+                onClick={(e) => fullMenuHandler(false)}
+              >
+                Contact
+                <span className="absolute left-0 top-auto bottom-5 inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100"></span>
               </Link>
             </li>
           </ul>
@@ -91,10 +86,11 @@ const MobileFullmenu = ({ fullMenuHandler }: MobileFullmenuProps) => {
           <span className="whitespace-nowrap">
             &copy; {new Date().getFullYear()}{" "}
           </span>
-          <Link href="/homepage">
-            <a className="font-medium text-heading no-underline hover:text-primary">
-              Ramon Pocon
-            </a>
+          <Link
+            href="/homepage"
+            className="font-medium text-heading no-underline hover:text-primary"
+          >
+            Ramon Pocón
           </Link>
         </p>
       </div>

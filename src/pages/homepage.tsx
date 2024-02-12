@@ -1,26 +1,23 @@
 import Head from "next/head";
-import { useEffect } from "react";
 import { Element as Section } from "react-scroll";
 import {
   AboutSection,
   BlogSection,
   ContactSection,
   HeroSection,
-  PortfoliosSection,
   ResumeSection,
-  ReviewsSection,
   ServicesSection,
   SkillsSection,
 } from "../components/containers";
 import { Layout } from "../components/layout";
 import { SectionHeading } from "../components/utils";
-import { getPostsByPage, Post } from "../lib/blogging";
+import { Post } from "../lib/blogging";
 
 const Homepage = ({ posts }: { posts: Post[] }) => {
   return (
     <Layout>
       <Head>
-        <title>Ramon Pocon - React Personal Portfolio</title>
+        <title>Ramón Pocón - React Personal Portfolio</title>
       </Head>
 
       {/* Start Hero Section */}

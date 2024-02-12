@@ -40,7 +40,7 @@ const ContactSection = () => {
                 {BURNDATA.phoneNumbers.map((number: string, index: number) => (
                   <p className="mb-0" key={index}>
                     <Link href={`tel:${number.split("-").join("")}`}>
-                      <a className="no-underline">{number}</a>
+                      {number}
                     </Link>
                   </p>
                 ))}
@@ -55,7 +55,7 @@ const ContactSection = () => {
                 {BURNDATA.emailAddress.map((email: string, index: number) => (
                   <p className="mb-0" key={index}>
                     <Link href={`mailto:${email}`}>
-                      <a className="no-underline">{email}</a>
+                      {email}
                     </Link>
                   </p>
                 ))}

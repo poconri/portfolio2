@@ -4,7 +4,6 @@ import NProgress from "nprogress";
 import { useRef } from "react";
 import { AppProvider } from "../context/appContext";
 import { Hydrate, QueryClient, QueryClientProvider } from "react-query";
-import { ReactQueryDevtools } from "react-query/devtools";
 import { ParallaxProvider } from "react-scroll-parallax";
 import "normalize.css";
 import "nprogress/nprogress.css";

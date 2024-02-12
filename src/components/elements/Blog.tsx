@@ -17,7 +17,7 @@ const Blog = ({ post: { title, date, thumb, category, slug } }: BlogProps) => {
   return (
     <article className="blog card p-4 md:p-5">
       <div className="blog-top relative mb-4">
-        <Link href={`/postdetails/${slug}`}>
+        <Link legacyBehavior href={`/postdetails/${slug}`}>
           <a className="fiximage hover-scale block" title={title}>
             <Image
               loader={imageLoader}
@@ -52,20 +52,19 @@ const Blog = ({ post: { title, date, thumb, category, slug } }: BlogProps) => {
         </div>
       </div>
       <h5 className="mb-0">
-        <Link href={`/postdetails/${slug}`}>
-          <a
-            className=" block overflow-hidden overflow-ellipsis whitespace-nowrap transition-colors duration-500 hover:text-primary"
-            title={title}
-          >
-            {title}
-          </a>
+        <Link
+          href={`/postdetails/${slug}`}
+          className=" block overflow-hidden overflow-ellipsis whitespace-nowrap transition-colors duration-500 hover:text-primary"
+          title={title}
+        >
+          {title}
         </Link>
       </h5>
       <div className="flex list-none gap-1.5 text-sm">
         {category.map((cat, i) => (
           <span key={i} className="after:content-[','] last:after:hidden">
-            <Link href={`/category/${createSlug(cat)}/1`}>
-              <a className=" hover:text-primary">{cat}</a>
+            <Link href={`/category/${createSlug(cat)}/1`} className=" hover:text-primary">
+              {cat}
             </Link>
           </span>
         ))}

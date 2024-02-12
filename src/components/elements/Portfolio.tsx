@@ -59,13 +59,12 @@ const Portfolio = ({
             </button>
           ) : null}
           {url ? (
-            <Link href={url}>
-              <a
-                target="_blank"
-                className="inline-flex h-10 min-h-0 w-10 items-center justify-center rounded-full bg-primary p-0 text-center text-lg text-grey"
-              >
-                <RiExternalLinkLine />
-              </a>
+            <Link
+              href={url}
+              target="_blank"
+              className="inline-flex h-10 min-h-0 w-10 items-center justify-center rounded-full bg-primary p-0 text-center text-lg text-grey"
+            >
+              <RiExternalLinkLine />
             </Link>
           ) : null}
         </div>

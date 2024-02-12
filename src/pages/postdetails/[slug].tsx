@@ -58,7 +58,7 @@ const PostPage = ({
     <>
       <Layout>
         <Head>
-          <title>{title} - Ramon Pocon - Blog</title>
+          <title>{title} - Ramon Pocón - Blog</title>
           {metaList.map((meta, index) => {
             if (meta.name.startsWith("og:")) {
               return (
@@ -130,8 +130,11 @@ const PostPage = ({
                         key={index}
                         className="after:content-[','] last:after:hidden"
                       >
-                        <Link href={`/category/${createSlug(cat)}/1`}>
-                          <a className="text-body hover:text-primary">{cat}</a>
+                        <Link
+                          href={`/category/${createSlug(cat)}/1`}
+                          className="text-body hover:text-primary"
+                        >
+                          {cat}
                         </Link>
                       </span>
                     ))}

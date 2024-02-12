@@ -43,7 +43,7 @@ const Posts = ({ posts, hasMore, categories, recentPosts }: PostsProps) => {
   return (
     <Layout>
       <Head>
-        <title>Blogs - Ramon Pocon - React Personal Portfolio</title>
+        <title>Blogs - Ramon Pocón - React Personal Portfolio</title>
       </Head>
       <Breadcrumb
         title="Blogs"
@@ -80,17 +80,19 @@ const Posts = ({ posts, hasMore, categories, recentPosts }: PostsProps) => {
               </div>
               <div className="flex gap-3 pt-10 text-center">
                 {page !== "1" && (
-                  <Link href={`/posts/${String(parseInt(page as string) - 1)}`}>
-                    <a className="btn btn-small">
-                      <span>Prev</span>
-                    </a>
+                  <Link
+                    href={`/posts/${String(parseInt(page as string) - 1)}`}
+                    className="btn btn-small"
+                  >
+                    <span>Prev</span>
                   </Link>
                 )}
                 {hasMore && (
-                  <Link href={`/posts/${String(parseInt(page as string) + 1)}`}>
-                    <a className="btn btn-small">
-                      <span>Next</span>
-                    </a>
+                  <Link
+                    href={`/posts/${String(parseInt(page as string) + 1)}`}
+                    className="btn btn-small"
+                  >
+                    <span>Next</span>
                   </Link>
                 )}
               </div>
@@ -111,18 +113,19 @@ const Posts = ({ posts, hasMore, categories, recentPosts }: PostsProps) => {
                   <ul className="styledlist mb-0 list-none pl-0">
                     {uniqueCategories.map((category, i) => (
                       <li key={i}>
-                        <Link href={`/category/${createSlug(category)}/1`}>
-                          <a className="clearfix hover:text-primary">
-                            {category}
-                            <span className="float-right">
-                              (
-                              {
-                                categories.filter((cat) => cat === category)
-                                  .length
-                              }
-                              )
-                            </span>
-                          </a>
+                        <Link
+                          href={`/category/${createSlug(category)}/1`}
+                          className="clearfix hover:text-primary"
+                        >
+                          {category}
+                          <span className="float-right">
+                            (
+                            {
+                              categories.filter((cat) => cat === category)
+                                .length
+                            }
+                            )
+                          </span>
                         </Link>
                       </li>
                     ))}
@@ -143,10 +146,11 @@ const Posts = ({ posts, hasMore, categories, recentPosts }: PostsProps) => {
                     {recentPosts.map((post, index) => (
                       <li key={index} className="mb-4 last:mb-0">
                         <p className="mb-0">
-                          <Link href={`/postdetails/${post.slug}`}>
-                            <a className="text-heading no-underline hover:text-primary hover:underline">
-                              {post.title}{" "}
-                            </a>
+                          <Link
+                            href={`/postdetails/${post.slug}`}
+                            className="text-heading no-underline hover:text-primary hover:underline"
+                          >
+                            {post.title}{" "}
                           </Link>
                         </p>
                         <small className="text-body">
