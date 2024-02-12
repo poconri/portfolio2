@@ -1,6 +1,6 @@
 import { useCallback, useRef } from "react";
 import { useQuery } from "react-query";
-import { Autoplay } from "swiper";
+import Autoplay from "swiper";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import { getClientReviews } from "../../fetchers";
 import { Review } from "../elements";

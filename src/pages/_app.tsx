@@ -16,6 +16,18 @@ Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());
 
+import "react";
+
+declare module "react" {
+  export interface FunctionComponent<P = {}> {
+    (props: PropsWithChildren<P>, context?: any): ReactElement<any, any> | null;
+    propTypes?: WeakValidationMap<P> | undefined;
+    contextTypes?: ValidationMap<any> | undefined;
+    defaultProps?: Partial<P> | undefined;
+    displayName?: string | undefined;
+  }
+}
+
 function MyApp({ Component, pageProps }: any) {
   const queryClientRef = useRef<QueryClient>();
 
@@ -41,7 +53,7 @@ function MyApp({ Component, pageProps }: any) {
           <link rel="manifest" href="/manifest.json" />
           <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
           <link rel="apple-touch-icon" href="/icon-192x192.png" />
-          <title>Ramon Pocon - React Personal Portfolio</title>
+          <title>Ramon Pocón - React Personal Portfolio</title>
         </Head>
         <ParallaxProvider>
           <Hydrate state={pageProps.dehydratedState}>

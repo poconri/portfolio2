@@ -1,5 +1,5 @@
 import { useCallback, useRef, useState, useEffect } from "react";
-import { Autoplay } from "swiper";
+import Autoplay from "swiper";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import { Blog } from "../elements";
 import { Spinner } from "../utils";
