@@ -9,7 +9,6 @@ const nextConfig = {
         loader: "custom",
         path: "/",
     },
-    output: 'export',
 };
 
 module.exports = withPlugins(
