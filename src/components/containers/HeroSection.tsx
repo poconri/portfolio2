@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { childrenAnimation } from "../../lib/motion";
 import { useQuery } from "react-query";
 import { getInformation } from "../../fetchers";
-import photo from "../../assets/photo.png";
+import photoWithBackground from "../../assets/photo-bg.jpg";
 import { TypeAnimation } from "react-type-animation";
 
 interface HeroSectionProps {
@@ -51,7 +51,7 @@ const HeroSection = ({
                   <Image
                     loader={imageLoader}
                     unoptimized={true}
-                    src={photo}
+                    src={photoWithBackground}
                     alt={data.fullName}
                     height={150}
                     width={150}
