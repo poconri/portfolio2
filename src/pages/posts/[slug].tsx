@@ -199,6 +199,5 @@ export function getStaticProps({ params: { slug } }: any) {
       categories,
       recentPosts,
     },
-    revalidate: 10,
   };
 }

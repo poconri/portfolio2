@@ -188,6 +188,5 @@ export function getStaticProps({
     props: {
       ...postData,
     },
-    revalidate: 10,
   };
 }
