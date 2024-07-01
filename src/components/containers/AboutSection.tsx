@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { childrenAnimation } from "../../lib/motion";
 import { getInformation } from "../../fetchers";
 import { useQuery } from "react-query";
-import photo from "../../assets/photo.jpg";
+import photoWithBackground from "../../assets/photo-bg.jpg";
 
 const AboutSection = () => {
   const { data } = useQuery("information", getInformation);
@@ -30,7 +30,7 @@ const AboutSection = () => {
             <Image
               loader={imageLoader}
               unoptimized={true}
-              src={photo}
+              src={photoWithBackground}
               style={{
                 backgroundColor: "#162033",
               }}

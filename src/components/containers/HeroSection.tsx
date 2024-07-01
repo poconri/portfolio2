@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { childrenAnimation } from "../../lib/motion";
 import { useQuery } from "react-query";
 import { getInformation } from "../../fetchers";
-import photo from "../../assets/photo.jpg";
+import photo from "../../assets/photo.png";
 import { TypeAnimation } from "react-type-animation";
 
 interface HeroSectionProps {
