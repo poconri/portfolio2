@@ -26,7 +26,7 @@ const Footer = () => {
             <SocialIcons data={BURNDATA.socialAddress} />
           </div>
           <p className="mb-0 w-full md:w-auto">
-            &copy; {new Date().getFullYear()}, Built by
+            &copy; {new Date().getFullYear()}, Built with ♥️ by
             <Link
               href="/homepage"
               className="pl-1.5 font-medium text-heading no-underline hover:text-primary"
