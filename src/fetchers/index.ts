@@ -10,12 +10,12 @@ const getServices = async () => {
   return res.data;
 };
 
-const getTechskills = async () => {
+const getTechSkills = async () => {
   let res = await http.get(`/techskills.json`);
   return res.data;
 };
 
-const getLanguageskills = async () => {
+const getLanguageSkills = async () => {
   let res = await http.get(`/languageskills.json`);
   return res.data;
 };
@@ -48,8 +48,8 @@ const getClientReviews = async () => {
 export {
   getInformation,
   getServices,
-  getTechskills,
-  getLanguageskills,
+  getTechSkills,
+  getLanguageSkills,
   getPortfolioFilters,
   getPortfolios,
   getJobExperience,

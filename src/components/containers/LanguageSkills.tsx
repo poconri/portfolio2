@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { useQuery } from "react-query";
-import { getLanguageskills } from "../../fetchers";
+import { getLanguageSkills } from "../../fetchers";
 import { childrenAnimation } from "../../lib/motion";
 import { ProgressBar } from "../elements";
 import { SkillData } from "./TechSkills";
 
 const LanguageSkills = () => {
-  const { data } = useQuery<SkillData[]>("language-skills", getLanguageskills);
+  const { data } = useQuery<SkillData[]>("language-skills", getLanguageSkills);
 
   if (!data) return null;
 

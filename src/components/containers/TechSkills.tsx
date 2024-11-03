@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useQuery } from "react-query";
-import { getTechskills } from "../../fetchers";
+import { getTechSkills } from "../../fetchers";
 import { childrenAnimation } from "../../lib/motion";
 import { ProgressCircle } from "../elements";
 import { ProgressCircleProps } from "../elements/ProgressCircle";
