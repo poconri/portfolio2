@@ -1,21 +1,21 @@
 {
-    "firstName": "Ramon",
-    "lastName": "Pocón",
-    "fullName": "Ramon Pocón",
-    "thumbImage": "/images/formal-image.png",
-    "largeImage": "/images/about-image.jpg",
-    "bio": "I'm a full stack developer. I use code to solve problems. I'm passionate about technology and I'm always looking for new challenges.",
-    "age": 34,
-    "nationality": "Guatemalan",
-    "languages": ["Spanish", "English"],
-    "address": null,
-    "freelance": "Available",
-    "socialAddress": {
-        "facebook": "https://www.facebook.com/ramon.ignacio.7",
-        "twitter": "https://twitter.com/kaozgt",
-        "github": "https://github.com/poconri",
-        "linkedin": "https://www.linkedin.com/in/ramon-ignacio-poc%C3%B3n-elias-23331738/"
-    },
-    "phoneNumbers": ["+502 5029 6653"],
-    "emailAddress": ["pocon.ri@gmail.com"]
+  "firstName": "Ramn",
+  "lastName": "Pocón",
+  "fullName": "Ramon Pocón",
+  "thumbImage": "/images/formal-image.png",
+  "largeImage": "/images/about-image.jpg",
+  "bio": "I'm a full stack developer. I use code to solve problems. I'm passionate about technology and I'm always looking for new challenges.",
+  "age": 34,
+  "nationality": "Guatemalan",
+  "languages": ["Spanish", "English"],
+  "address": null,
+  "freelance": "Available",
+  "socialAddress": {
+    "facebook": "https://www.facebook.com/ramon.ignacio.7",
+    "twitter": "https://twitter.com/kaozgt",
+    "github": "https://github.com/poconri",
+    "linkedin": "https://www.linkedin.com/in/ramon-ignacio-poc%C3%B3n-elias-23331738/"
+  },
+  "phoneNumbers": ["+502 5029 6653"],
+  "emailAddress": ["pocon.ri@gmail.com"]
 }

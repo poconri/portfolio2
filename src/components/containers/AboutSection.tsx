@@ -35,7 +35,7 @@ const AboutSection = () => {
                 backgroundColor: "#162033",
               }}
               height={422}
-              width={660}
+              width={720}
               objectFit="contain"
               alt={data.fullName}
               placeholder="blur"

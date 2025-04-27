@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { HTMLAttributes } from "react";
 import {
   AboutSection,
   ReviewsSection,
