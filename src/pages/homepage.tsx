@@ -12,8 +12,31 @@ import {
 import { Layout } from "../components/layout";
 import { SectionHeading } from "../components/utils";
 import { Post } from "../lib/blogging";
+import { useEffect } from "react";
+import { track } from "@vercel/analytics/react";
 
 const Homepage = ({ posts }: { posts: Post[] }) => {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            track("section_view", {
+              section_name: entry.target.id,
+            });
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    document.querySelectorAll("section").forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <Layout>
       <Head>
@@ -21,7 +44,7 @@ const Homepage = ({ posts }: { posts: Post[] }) => {
       </Head>
 
       {/* Start Hero Section */}
-      <Section name="section-home">
+      <Section name="section-home" id="section-home">
         <HeroSection blurred />
       </Section>
       {/* End Hero Section */}
@@ -29,6 +52,7 @@ const Homepage = ({ posts }: { posts: Post[] }) => {
       {/* Start About Section */}
       <Section
         name="section-about"
+        id="section-about"
         className="about-section pt-24 lg:pt-28 xl:pt-32"
       >
         <div className="container mx-auto">
@@ -41,6 +65,7 @@ const Homepage = ({ posts }: { posts: Post[] }) => {
       {/* Start Skills Section */}
       <Section
         name="section-skills"
+        id="section-skills"
         className="skills-section pt-24 lg:pt-28 xl:pt-32"
       >
         <div className="container mx-auto">
@@ -57,6 +82,7 @@ const Homepage = ({ posts }: { posts: Post[] }) => {
       {/* Start Service Section */}
       <Section
         name="section-service"
+        id="section-service"
         className="services-section pt-24 lg:pt-28 xl:pt-32"
       >
         <div className="container mx-auto">
@@ -73,6 +99,7 @@ const Homepage = ({ posts }: { posts: Post[] }) => {
       {/* Start Resume Section */}
       <Section
         name="section-resume"
+        id="section-resume"
         className="resume-section pt-24 lg:pt-28 xl:pt-32"
       >
         <div className="container mx-auto">
@@ -89,7 +116,7 @@ const Homepage = ({ posts }: { posts: Post[] }) => {
       {/* Start Portfolios Section */}
       {/* <Section
         name="section-portfolios"
-        className="portfolios-section pt-24 lg:pt-28 xl:pt-32"
+        className="pt-24 portfolios-section lg:pt-28 xl:pt-32"
       >
         <div className="container mx-auto">
           <SectionHeading animated={false} title="My Works" watermark="Works" />
@@ -101,7 +128,7 @@ const Homepage = ({ posts }: { posts: Post[] }) => {
       {/* Start Reviews Section */}
       {/* <Section
         name="section-reviews"
-        className="reviews-section pt-24 lg:pt-28 xl:pt-32"
+        className="pt-24 reviews-section lg:pt-28 xl:pt-32"
       >
         <div className="container mx-auto">
           <SectionHeading
@@ -117,6 +144,7 @@ const Homepage = ({ posts }: { posts: Post[] }) => {
       {/* Start Blog Section */}
       <Section
         name="section-blog"
+        id="section-blog"
         className="news-section pt-24 lg:pt-28 xl:pt-32"
       >
         <div className="container mx-auto">
@@ -133,6 +161,7 @@ const Homepage = ({ posts }: { posts: Post[] }) => {
       {/* Start Contact Section */}
       <Section
         name="section-contact"
+        id="section-contact"
         className="contact-section pt-24 lg:pt-28 xl:pt-32"
       >
         <div className="container mx-auto">
