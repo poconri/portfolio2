@@ -63,7 +63,7 @@ const HeroSection = ({
                 <div className="herosection-image fiximage relative z-20 inline-block h-[150px] w-[150px] overflow-hidden rounded-full border-6 border-primary border-opacity-10 align-middle">
                   <Image
                     loader={imageLoader}
-                    unoptimized={true}
+                    unoptimized
                     src={photoWithBackground}
                     alt={data.fullName}
                     height={150}
