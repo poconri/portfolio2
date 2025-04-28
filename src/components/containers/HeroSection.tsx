@@ -23,12 +23,25 @@ const HeroSection = ({
 }: HeroSectionProps) => {
   const { data } = useQuery("information", getInformation);
 
-  if (!data) return null;
+  if (!data) {
+    return (
+      <div className="herosection relative flex min-h-screen items-center justify-center overflow-hidden">
+        <div className="herosection-content w-full py-20 text-center md:w-3/4">
+          <div
+            className="mb-5 inline-block rounded-full bg-gray-300"
+            style={{ height: 150, width: 150 }}
+          />
+          <div className="mx-auto my-4 h-8 w-1/2 rounded bg-gray-300" />
+          <div className="mx-auto my-2 h-4 w-1/3 rounded bg-gray-200" />
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div className="relative overflow-hidden herosection">
+    <div className="herosection relative overflow-hidden">
       {!blurred && (
-        <div className="absolute top-0 left-0 w-full h-full herosection-bg"></div>
+        <div className="herosection-bg absolute top-0 left-0 h-full w-full"></div>
       )}
       <div
         className={`herosection-content relative z-20 bg-grey-darken  ${
@@ -36,17 +49,17 @@ const HeroSection = ({
         }`}
       >
         <div className="container relative mx-auto">
-          <div className="flex items-center justify-center w-full min-h-screen">
-            <div className="w-full py-20 text-center herosection-content md:w-3/4">
+          <div className="flex min-h-screen w-full items-center justify-center">
+            <div className="herosection-content w-full py-20 text-center md:w-3/4">
               <motion.div
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.2 }}
                 variants={childrenAnimation}
-                className="relative inline-block mb-5 overflow-hidden align-middle rounded-full herosection-imagewrapper"
+                className="herosection-imagewrapper relative mb-5 inline-block overflow-hidden rounded-full align-middle"
               >
-                <span className="absolute top-0 left-0 z-10 w-full h-full rounded-full herosection-imageanimation animate-spin bg-gradient-to-tr from-primary to-transparent"></span>
+                <span className="herosection-imageanimation absolute top-0 left-0 z-10 h-full w-full animate-spin rounded-full bg-gradient-to-tr from-primary to-transparent"></span>
                 <div className="herosection-image fiximage relative z-20 inline-block h-[150px] w-[150px] overflow-hidden rounded-full border-6 border-primary border-opacity-10 align-middle">
                   <Image
                     loader={imageLoader}
@@ -100,7 +113,7 @@ const HeroSection = ({
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.6 }}
                 variants={childrenAnimation}
-                className="mb-0 lead"
+                className="lead mb-0"
               >
                 {data.bio}
               </motion.p>
@@ -110,7 +123,7 @@ const HeroSection = ({
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.8 }}
                 variants={childrenAnimation}
-                className="text-center herosection-socialicons mt-7"
+                className="herosection-socialicons mt-7 text-center"
               >
                 <SocialIcons data={data.socialAddress} />
               </motion.div>
@@ -123,7 +136,7 @@ const HeroSection = ({
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 1 }}
               variants={childrenAnimation}
-              className="absolute left-0 top-auto justify-between w-full text-center herosection-bottom bottom-10"
+              className="herosection-bottom absolute left-0 top-auto bottom-10 w-full justify-between text-center"
             >
               <Link
                 activeClass="active"
@@ -132,9 +145,9 @@ const HeroSection = ({
                 smooth="easeInQuad"
                 offset={-74}
                 duration={1000}
-                className="text-xs font-medium tracking-widest uppercase transition-all cursor-pointer hover:text-primary"
+                className="cursor-pointer text-xs font-medium uppercase tracking-widest transition-all hover:text-primary"
               >
-                <RiArrowDownLine className="inline text-base animate-bounce" />
+                <RiArrowDownLine className="inline animate-bounce text-base" />
                 <span className="pl-2">Scroll Down</span>
               </Link>
             </motion.div>
